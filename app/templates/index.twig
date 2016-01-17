@@ -1,0 +1,248 @@
+{% extends 'layout.twig' %}
+{% block content %}
+    {% include 'popups/popups.twig' %}
+<div class="container">
+    <div class="wrapper">
+        <section class="menu">
+            <div class="aboutHeader" data-menu="0">
+                <div class="aboutLogo">
+                    {% include 'svg/sign_bw.twig' %}
+                </div>
+                <div class="aboutMenu" data-open-menu="0">
+                    {% include 'svg/menu.twig' %}
+                </div>
+                <div class="aboutLogoOpen">
+                    {% include 'svg/sign_color.twig' %}
+                </div>
+                <div class="menuContainer">
+                    <ul class="headerMenu">
+                        <li><a href="#company">Company</a></li>
+                        <li><a href="#chelsea">Chelsea</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#request">Request</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                    <div class="menuHolder"></div>
+                </div>
+            </div>
+        </section>
+        <section class="top">
+            <div class="centerContainer">
+                <div class="fullLogo">
+                    {% include 'svg/logo_full.twig' %}
+                </div>
+                <div class="menuContainer">
+                    <ul class="menu">
+                        <li><a href="#company">Company</a></li>
+                        <li><a href="#chelsea">Chelsea</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#request">Request</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                    <div class="menuHolder"></div>
+                </div>
+                <div class="textContainer">
+                    <div class="topText">
+                        Chelsea Partners Consulting Ltd is a specialist provider of<br>
+                        consulting services for companies looking to register a legal entity and outsource parts of<br>
+                        their business operations into the UK and Continental Europe.
+                    </div>
+                    <div class="textHolder"></div>
+                </div>
+                <div class="scrollDown first">
+                    {% include 'svg/scroll_down_up.twig' %}
+                </div>
+            </div>
+        </section>
+        <section id="company" class="about">
+            <div class="centerContainer">
+                <div class="titleText">
+                    <span class="titleRed">About a</span><br>
+                    <span class="titleWhite">company</span>
+                </div>
+                <div class="textContainer">
+                    <div class="aboutText">
+                        CPC offers a full range of professional services for companies looking to expand and outsource parts of their business<br>
+                        operation into the UK and Continental Europe. Our services range from a simple Company<br>
+                        Registration and Accounting / Legal Support to a more sophisticated Market Research and Sales Growth<br>
+                        strategy development aimed at gaining access to the UK / EU market.
+                    </div>
+                    <div class="textHolder"></div>
+                </div>
+                <div class="scrollDown second">
+                    {% include 'svg/scroll_down_up.twig' %}
+                </div>
+            </div>
+        </section>
+        <section id="chelsea" class="chelsea">
+            <div class="centerContainer">
+                <div class="titleText">
+                    <span class="titleRed">London,</span><br>
+                    <span class="titleWhite">Chelsea</span>
+                </div>
+                <div class="textContainer">
+                    <div class="chelseaText">
+                        Based in Chelsea, London, CPC team is a group of professionals with a background in London’s Tier 1 Investment Banks,<br>
+                        Private Banks, Law Firms and Property Consulting firms with over 30 years of accumulated<br>
+                        experience in exposure to UK’s professional services sector. Our aim is to ensure that your business operation<br>
+                        transfer to the UK runs as smooth and simple as possible.
+                    </div>
+                    <div class="textHolder"></div>
+                </div>
+                <div class="scrollDown third">
+                    {% include 'svg/scroll_down_up.twig' %}
+                </div>
+            </div>
+        </section>
+        <section id="services" class="services">
+            <div class="centerContainer">
+                <div class="servicesHeader">
+                    <div class="titleText">
+                        <span class="titleRed">Our</span><br>
+                        <span class="titleWhite">services</span>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <div class="block">
+                        <div class="bottomTriangle blue"></div>
+                        <div class="icon">
+                            {% include 'svg/s_banking.twig' %}
+                        </div>
+                        <div class="text">
+                            Banking and<br>
+                            Capital Markets
+                        </div>
+                        <div class="button" data-show-block="1">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="icon">
+                            {% include 'svg/s_registration.twig' %}
+                        </div>
+                        <div class="text">
+                            Company<br>
+                            Registration
+                        </div>
+                        <div class="button" data-show-block="0">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="topTriangle red"></div>
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                        <div class="button"></div>
+                    </div>
+                    <div class="block">
+                        <div class="icon banking">
+                            {% include 'svg/s_tax.twig' %}
+                        </div>
+                        <div class="text">
+                            Tax and<br>
+                            Accounting
+                        </div>
+                        <div class="button" data-show-block="4">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block blue">
+                        <div class="icon">
+                            {% include 'svg/s_virtual.twig' %}
+                        </div>
+                        <div class="text">
+                            Virtual Office and<br>
+                            Administration<br>
+                            Services
+                        </div>
+                        <div class="button" data-show-block="3">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="icon">
+                            {% include 'svg/s_directors.twig' %}
+                        </div>
+                        <div class="text">
+                            Nominee<br>
+                            Directors
+                        </div>
+                        <div class="button" data-show-block="2">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="bottomTriangle red"></div>
+                        <div class="icon"></div>
+                        <div class="text"></div>
+                        <div class="button"></div>
+                    </div>
+                    <div class="block back">
+                        <div class="icon">
+                            {% include 'svg/s_market.twig' %}
+                        </div>
+                        <div class="text">
+                            Market penetration,<br>
+                            Research<br>
+                            and Sales Support
+                        </div>
+                        <div class="button" data-show-block="6">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="topTriangle blue"></div>
+                        <div class="icon">
+                            {% include 'svg/s_advisory.twig' %}
+                        </div>
+                        <div class="text">
+                            Legal<br>
+                            Advisory
+                        </div>
+                        <div class="button" data-show-block="5">
+                            {% include 'svg/info_open.twig' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="request" class="request">
+            <div class="centerContainer">
+                <div class="titleText">
+                    <span class="titleRed">Make</span><br>
+                    <span class="titleWhite">request</span>
+                </div>
+                <div class="formHolder">
+                    <form class="requestForm">
+                        <input data-request-type="all" type="hidden" name="optional" value="">
+                        <div class="inputField">
+                            <input type="text" name="name" placeholder="Your name, Company">
+                        </div>
+                        <div class="inputField">
+                            <input type="tel" name="phone" placeholder="Contact phone">
+                        </div>
+                        <div class="inputField">
+                            <input type="text" name="city" placeholder="Country, City">
+                        </div>
+                        <div class="inputField">
+                            <input type="email" name="email" placeholder="E-mail">
+                        </div>
+                        <div class="textField">
+                            <textarea name="comment" placeholder="Explain the essence of your request"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">send request</button>
+                            <div class="buttonHolder"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="scrollDown up last">
+                    {% include 'svg/scroll_down_up.twig' %}
+                </div>
+            </div>
+        </section>
+        {% include 'footer.twig' %}
+    </div>
+</div>
+{% endblock %}
+
