@@ -4,12 +4,36 @@
     height 440px
     box-sizing border-box
     padding 118px 0
+    +mq(850px,1170px)
+      height 320px
+      padding 83px 0
+    +mq(768px,849px)
+      height 320px
+      padding 83px 0
+    +mq(481px,767px)
+      height 320px
+      padding 83px 0
+    +mq(0, 480px)
+      height 180px
+      padding 59px 0
     .titleText
       font-family BanderaProBold
       font-size 150px
       font-weight 700
       line-height 100px
       text-align center
+      +mq(850px,1170px)
+        font-size 130px
+        line-height 85px
+      +mq(768px,849px)
+        font-size 110px
+        line-height 75px
+      +mq(481px,767px)
+        font-size 110px
+        line-height 75px
+      +mq(0, 480px)
+        font-size 55px
+        line-height 35px
       .titleRed
         color #cd2430
       .titleWhite
@@ -20,12 +44,40 @@
     margin 0 auto
     display flex
     flex-wrap wrap
+    +mq(850px,1170px)
+      width 720px
+      height 720px
+    +mq(768px,849px)
+      width 720px
+      height 720px
+    +mq(481px,767px)
+      width 320px
+      height 640px
+    +mq(0, 480px)
+      width 320px
+      height 640px
     .block
       display inline-block
       width 360px
       height 360px
       position relative
       z-index 9
+      +mq(850px,1170px)
+        width 240px
+        height 240px
+      +mq(768px,849px)
+        width 240px
+        height 240px
+      +mq(481px,767px)
+        width 160px
+        height 160px
+        &.no-mobile
+          display none
+      +mq(0, 480px)
+        width 160px
+        height 160px
+        &.no-mobile
+          display none
       &.back
         background-color #747371
       &.blue
@@ -40,9 +92,33 @@
         &.red
           border-top 360px solid #cd2430
           border-right 360px solid transparent
+          +mq(850px,1170px)
+            border-top 240px solid #cd2430
+            border-right 240px solid transparent
+          +mq(768px,849px)
+            border-top 240px solid #cd2430
+            border-right 240px solid transparent
+          +mq(481px,767px)
+            border-top 160px solid #cd2430
+            border-right 160px solid transparent
+          +mq(0, 480px)
+            border-top 160px solid #cd2430
+            border-right 160px solid transparent
         &.blue
           border-top 360px solid #3d4574
           border-right 360px solid transparent
+          +mq(850px,1170px)
+            border-top 240px solid #3d4574
+            border-right 240px solid transparent
+          +mq(768px,849px)
+            border-top 240px solid #3d4574
+            border-right 240px solid transparent
+          +mq(481px,767px)
+            border-top 160px solid #3d4574
+            border-right 160px solid transparent
+          +mq(0, 480px)
+            border-top 160px solid #3d4574
+            border-right 160px solid transparent
       .bottomTriangle
         position absolute
         display inline-block
@@ -51,9 +127,33 @@
         &.blue
           border-bottom 360px solid #3d4574
           border-left 360px solid transparent
+          +mq(850px,1170px)
+            border-bottom 240px solid #3d4574
+            border-left 240px solid transparent
+          +mq(768px,849px)
+            border-bottom 240px solid #3d4574
+            border-left 240px solid transparent
+          +mq(481px,767px)
+            border-bottom 160px solid #3d4574
+            border-left 160px solid transparent
+          +mq(0, 480px)
+            border-bottom 160px solid #3d4574
+            border-left 160px solid transparent
         &.red
           border-bottom 360px solid #cd2430
           border-left 360px solid transparent
+          +mq(850px,1170px)
+            border-bottom 240px solid #cd2430
+            border-left 240px solid transparent
+          +mq(768px,849px)
+            border-bottom 240px solid #cd2430
+            border-left 240px solid transparent
+          +mq(481px,767px)
+            border-bottom 160px solid #cd2430
+            border-left 160px solid transparent
+          +mq(0, 480px)
+            border-bottom 160px solid #cd2430
+            border-left 160px solid transparent
       .text
         font-family BanderaProBold
         color #f6f3ef
@@ -62,12 +162,40 @@
         line-height 28px
         text-align center
         position relative
+        +mq(850px,1170px)
+          font-size 16px
+          line-height 20px
+        +mq(768px,849px)
+          font-size 16px
+          line-height 20px
+        +mq(481px,767px)
+          font-size 12px
+          line-height 15px
+        +mq(0, 480px)
+          font-size 12px
+          line-height 15px
       .icon
         position relative
         width 99px
         height 106px
         display block
         margin 46px auto 48px auto
+        +mq(850px,1170px)
+          width 69px
+          height 69px
+          margin 32px auto 28px auto
+        +mq(768px,849px)
+          width 69px
+          height 69px
+          margin 32px auto 28px auto
+        +mq(481px,767px)
+          width 41px
+          height 45px
+          margin 26px auto 25px auto
+        +mq(0, 480px)
+          width 41px
+          height 45px
+          margin 26px auto 25px auto
         svg
           width 100%
           height 100%
@@ -83,6 +211,24 @@
         width 26px
         height 21px
         transform rotate(180deg)
+        +mq(850px,1170px)
+          width 21px
+          height 17px
+          bottom 20px
+        +mq(768px,849px)
+          width 21px
+          height 17px
+          bottom 20px
+        +mq(481px,767px)
+          bottom 0
+          width 100%
+          height 100%
+          opacity 0
+        +mq(0, 480px)
+          bottom 0
+          width 100%
+          height 100%
+          opacity 0
         svg
           width 100%
           height 100%

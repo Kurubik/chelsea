@@ -4,6 +4,8 @@
   background-size cover
   background-repeat no-repeat
   background-position center
+  +mq(0, 480px)
+    height 590px
   .titleText
     position relative
     z-index 9
@@ -21,6 +23,15 @@
       margin 0 0 -2px 45px
       font-size 110px
       line-height 75px
+    +mq(481px,767px)
+      margin 0 0 -2px 45px
+      font-size 110px
+      line-height 75px
+    +mq(0, 480px)
+      margin 0 0 -2px 29px
+      padding-top 243px
+      font-size 55px
+      line-height 35px
     .titleRed
       color #cd2430
     .titleWhite
@@ -42,6 +53,7 @@
       left 0
       right 0
       margin 0 auto
+      min-width 320px
       +mq(850px,1170px)
         width 100%
         font-size 15px
@@ -51,6 +63,16 @@
         font-size 14px
         line-height 22px
         padding 57px 30px 0 30px
+      +mq(481px,767px)
+        width 100%
+        font-size 14px
+        line-height 22px
+        padding 35px 30px 0 30px
+      +mq(0, 480px)
+        width 100%
+        padding 46px 54px
+        font-size 12px
+        line-height 17px
     .textHolder
       display block
       opacity 0.8
@@ -65,3 +87,12 @@
       +mq(768px,849px)
         width 708px
         margin 0 0 0 14%
+      +mq(481px,767px)
+        width 708px
+        margin 0 0 0 14%
+      +mq(0, 480px)
+        width 100%
+        height 279px
+        transform skew(0deg)
+        margin 0
+        opacity 1

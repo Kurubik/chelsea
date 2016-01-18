@@ -4,17 +4,25 @@
   background-size cover
   background-repeat no-repeat
   background-position center
+  +mq(0, 480px)
+    height 560px
   .fullLogo
     display block
     padding 83px 0 0 0
     margin 0 auto
     width 252px
     height 153px
+    +mq(0, 480px)
+      padding 50px 0 0 0
+      width 167px
+      height 101px
     svg
       width 100%
       height 100%
   .menuContainer
     margin 265px 0 0 0
+    +mq(0, 480px)
+      margin 160px 0 0 0
     .menuHolder
       display block
       opacity 0.8
@@ -28,6 +36,10 @@
         width 700px
       +mq(768px,849px)
         width 608px
+      +mq(481px,767px)
+        width 445px
+      +mq(0, 480px)
+        width 235px
     .menu
       position absolute
       list-style none
@@ -41,6 +53,10 @@
         width 575px
       +mq(768px,849px)
         width 485px
+      +mq(481px,767px)
+        width 450px
+      +mq(0, 480px)
+        display none
       li
         display inline-block
         padding-left 60px
@@ -48,6 +64,8 @@
           padding-left 60px
         +mq(768px,849px)
           padding-left 50px
+        +mq(481px,767px)
+          padding-left 40px
         &:first-child
           padding-left 0
         a
@@ -63,9 +81,28 @@
             font-size 16px
           +mq(768px,849px)
             font-size 14px
+          +mq(481px,767px)
+            font-size 14px
           &:hover
             color #cd2430
             transition all 0.3s
+  .menuButton
+    display none
+    margin 0 auto
+    width 21px
+    height 11px
+    position absolute
+    left 0
+    right 0
+    margin-top 15px
+    z-index 9
+    svg
+      width 100%
+      height 100%
+      path
+        fill #f6f3ef
+    +mq(0, 480px)
+      display block
   .textContainer
     .topText
       position absolute
@@ -84,6 +121,7 @@
       left 0
       right 0
       margin 0 auto
+      min-width 320px
       +mq(850px,1170px)
         font-size 15px
         width 100%
@@ -92,6 +130,16 @@
         font-size 15px
         width 100%
         padding 40px 140px
+      +mq(481px,767px)
+        font-size 15px
+        width 100%
+        padding 30px
+      +mq(0, 480px)
+        width 100%
+        padding 35px 53px
+        font-size 14px
+        line-height 19px
+        height 200px
     .textHolder
       display block
       opacity 0.8
@@ -109,3 +157,13 @@
         width 468px
         border-left 120px solid transparent
         border-right 120px solid transparent
+      +mq(481px,767px)
+        width 305px
+        border-left 120px solid transparent
+        border-right 120px solid transparent
+      +mq(0, 480px)
+        width 100%
+        height 200px
+        border none
+        opacity 1
+        background #cd2430

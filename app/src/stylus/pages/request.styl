@@ -3,8 +3,20 @@
   height 1040px
   background-size cover
   background-repeat no-repeat
+  background-position center
   margin -90px 0 0 0
   position relative
+  +mq(850px,1170px)
+    margin -60px 0 0 0
+    height 900px
+  +mq(768px,849px)
+    margin -60px 0 0 0
+    height 900px
+  +mq(481px,767px)
+    margin -60px 0 0 0
+    height 900px
+  +mq(0, 480px)
+    height 830px
   .titleText
     font-family BanderaProBold
     font-size 150px
@@ -12,6 +24,22 @@
     line-height 100px
     text-align center
     padding 185px 0 84px 0
+    +mq(850px,1170px)
+      font-size 130px
+      line-height 85px
+      padding 135px 0 59px 0
+    +mq(768px,849px)
+      font-size 110px
+      line-height 75px
+      padding 135px 0 59px 0
+    +mq(481px,767px)
+      font-size 110px
+      line-height 75px
+      padding 135px 0 59px 0
+    +mq(0, 480px)
+      padding 128px 0 41px 0
+      font-size 55px
+      line-height 35px
     .titleRed
       color #cd2430
     .titleWhite
@@ -19,14 +47,40 @@
   .formHolder
     margin 0 auto
     width 740px
+    +mq(850px,1170px)
+      width 640px
+    +mq(768px,849px)
+      width 640px
+    +mq(481px,767px)
+      width 100%
+      padding 0 25px
+      box-sizing border-box
+    +mq(0, 480px)
+      width 100%
+      padding 0 25px
+      box-sizing border-box
     .inputField
       width 359px
       height 50px
       display inline-block
       margin-left 0
       margin-bottom 20px
+      +mq(850px,1170px)
+        width 310px
+      +mq(768px,849px)
+        width 310px
+      +mq(481px,767px)
+        width 100%
+        margin-bottom 10px
+      +mq(0, 480px)
+        width 100%
+        margin-bottom 10px
       &:nth-child(2n+1)
         margin-left 20px
+        +mq(481px,767px)
+          margin-left 0
+        +mq(0, 480px)
+          margin-left 0
       input
         box-sizing border-box
         border 1px solid #f6f3ef
@@ -40,6 +94,14 @@
         font-weight 400
         text-align left
         padding 0 19px
+        +mq(850px,1170px)
+          font-size 16px
+        +mq(768px,849px)
+          font-size 16px
+        +mq(481px,767px)
+          font-size 13px
+        +mq(0, 480px)
+          font-size 13px
     .textField
       height 180px
       width 100%
@@ -56,12 +118,22 @@
         font-weight 400
         text-align left
         padding 16px 19px
+        +mq(850px,1170px)
+          font-size 16px
+        +mq(768px,849px)
+          font-size 16px
+        +mq(481px,767px)
+          font-size 13px
+        +mq(0, 480px)
+          font-size 13px
     .button
       position relative
       width 200px
       height 50px
       box-sizing border-box
       margin 20px auto 0 auto
+      +mq(0, 480px)
+        width 170px
       &:hover
         .buttonHolder
           transition all 0.3s
@@ -86,3 +158,5 @@
         font-size 18px
         font-weight 700
         text-align center
+        +mq(0, 480px)
+          font-size 14px

@@ -3,6 +3,9 @@
   height 800px
   background-size cover
   background-repeat no-repeat
+  background-position center
+  +mq(0, 480px)
+    height 590px
   .titleText
     display inline-block
     font-family BanderaProBold
@@ -13,13 +16,31 @@
     margin 297px 0 0 45%
     z-index 9
     position relative
+    +mq(850px,1170px)
+      font-size 130px
+      line-height 85px
+    +mq(768px,849px)
+      font-size 110px
+      line-height 75px
+      margin 297px 0 0 40%
+    +mq(481px,767px)
+      font-size 110px
+      line-height 75px
+      margin 297px 0 0 17%
+    +mq(0, 480px)
+      margin 243px 0 0 80px
+      font-size 55px
+      line-height 35px
     .titleRed
       color #cd2430
     .titleWhite
       color #f6f3ef
   .textContainer
     margin-top -4px
+    +mq(0, 480px)
+      margin 0
     .chelseaText
+      box-sizing border-box
       font-family BanderaPro
       color #f6f3ef
       font-size 16px
@@ -33,6 +54,26 @@
       margin 0 auto
       width 900px
       padding-top 57px
+      min-width 320px
+      +mq(850px,1170px)
+        width 100%
+        font-size 15px
+        line-height 23px
+      +mq(768px,849px)
+        width 100%
+        font-size 14px
+        line-height 22px
+        padding 57px 50px 0 50px
+      +mq(481px,767px)
+        width 100%
+        font-size 14px
+        line-height 22px
+        padding 30px 50px 0 50px
+      +mq(0, 480px)
+        font-size 12px
+        line-height 17px
+        padding 46px 53px
+        width 100%
     .textHolder
       display inline-block
       opacity 0.8
@@ -41,3 +82,17 @@
       transform skew(45deg)
       background-color #cd2430
       margin-left 8%
+      +mq(850px,1170px)
+        width 878px
+      +mq(768px,849px)
+        width 678px
+        margin-left -2%
+      +mq(481px,767px)
+        width 678px
+        margin-left -2%
+      +mq(0, 480px)
+        height 274px
+        width 100%
+        transform skew(0)
+        opacity 1
+        margin 0
