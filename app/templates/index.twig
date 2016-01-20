@@ -6,7 +6,7 @@
     <div class="wrapper">
         <section data-main-menu="menu" class="menu">
             <div class="aboutHeader" data-menu="0">
-                <div class="aboutLogo">
+                <div class="aboutLogo" data-sroll="top">
                     {% include 'svg/sign_bw.twig' %}
                 </div>
                 <div class="aboutMenu" data-open-menu="0">
@@ -16,32 +16,32 @@
                         <div class="line-bottom"></div>
                     </div>
                 </div>
-                <div class="aboutLogoOpen">
+                <div class="aboutLogoOpen" data-sroll="top" data-menu="close">
                     {% include 'svg/sign_color.twig' %}
                 </div>
                 <div class="menuContainer">
-                    <ul class="headerMenu">
-                        <li><a href="#company">Company</a></li>
-                        <li><a href="#chelsea">Chelsea</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#request">Request</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
+                    <ul data-remove-menu="0" class="headerMenu">
+                        <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
+                        <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
+                        <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
+                        <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
+                        <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="top">
+        <section data-section="5" id="top" class="top">
             <div class="centerContainer">
                 <div class="fullLogo">
                     {% include 'svg/logo_full.twig' %}
                 </div>
                 <div data-anim-top="0" class="menuContainer hide">
                     <ul data-anim-top="2" class="menu hide">
-                        <li><a href="#company">Company</a></li>
-                        <li><a href="#chelsea">Chelsea</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#request">Request</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
+                        <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
+                        <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
+                        <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
+                        <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
+                        <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
                     </ul>
                     <div data-anim-top="2" class="menuButton hide">
                         <div class="border-menu">
@@ -60,12 +60,17 @@
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div data-anim-top="4" class="scrollDown first hide">
+                <div data-anim-top="4" class="scrollDown first hide" data-anchor-link="0" href="#company">
+                    <div class="rectHolder">
+                        <div class="rect first"></div>
+                        <div class="rect"></div>
+                        <div class="rect"></div>
+                    </div>
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>
         </section>
-        <section id="company" class="about">
+        <section data-section="0" id="company" class="about">
             <div class="centerContainer">
                 <div data-anim-about="0" class="titleText hide">
                     <span class="titleRed">About a</span><br>
@@ -80,12 +85,17 @@
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div data-anim-about="4" class="scrollDown second hide">
+                <div data-anim-about="4" data-anchor-link="1" href="#chelsea" class="scrollDown second hide">
+                    <div class="rectHolder">
+                        <div class="rect first"></div>
+                        <div class="rect"></div>
+                        <div class="rect"></div>
+                    </div>
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>
         </section>
-        <section id="chelsea" class="chelsea">
+        <section data-section="1" id="chelsea" class="chelsea">
             <div class="centerContainer">
                 <div data-anim-chel="0" class="titleText hide">
                     <span class="titleRed">London,</span><br>
@@ -100,12 +110,17 @@
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div data-anim-chel="4" class="scrollDown third hide">
+                <div data-anim-chel="4" data-anchor-link="2" href="#services" class="scrollDown third hide">
+                    <div class="rectHolder">
+                        <div class="rect first"></div>
+                        <div class="rect"></div>
+                        <div class="rect"></div>
+                    </div>
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>
         </section>
-        <section id="services" class="services">
+        <section data-section="2" id="services" class="services">
             <div class="centerContainer">
                 <div class="servicesHeader">
                     <div class="titleText">
@@ -113,9 +128,9 @@
                         <span class="titleWhite">services</span>
                     </div>
                 </div>
-                <div class="blocks">
-                    <div class="block">
-                        <div class="bottomTriangle blue mobile-red"></div>
+                <div data-start-anim="services" class="blocks">
+                    <div data-anim-serv="0" class="block hide" data-show-block="1">
+                        <div data-anim-serv="9" class="bottomTriangle hide blue mobile-red"></div>
                         <div class="icon">
                             {% include 'svg/s_banking.twig' %}
                         </div>
@@ -123,11 +138,11 @@
                             Banking and<br>
                             Capital Markets
                         </div>
-                        <div class="button" data-show-block="1">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block">
+                    <div data-anim-serv="1" class="block hide" data-show-block="0">
                         <div class="icon">
                             {% include 'svg/s_registration.twig' %}
                         </div>
@@ -135,17 +150,17 @@
                             Company<br>
                             Registration
                         </div>
-                        <div class="button" data-show-block="0">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block no-mobile">
-                        <div class="topTriangle red"></div>
+                    <div data-anim-serv="2" class="block no-mobile hide">
+                        <div data-anim-serv="9" class="topTriangle red hide"></div>
                         <div class="icon"></div>
                         <div class="text"></div>
                         <div class="button"></div>
                     </div>
-                    <div class="block">
+                    <div data-anim-serv="3" class="block hide" data-show-block="4">
                         <div class="icon banking">
                             {% include 'svg/s_tax.twig' %}
                         </div>
@@ -153,11 +168,11 @@
                             Tax and<br>
                             Accounting
                         </div>
-                        <div class="button" data-show-block="4">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block blue">
+                    <div data-anim-serv="4" class="block blue hide" data-show-block="3">
                         <div class="icon">
                             {% include 'svg/s_virtual.twig' %}
                         </div>
@@ -166,11 +181,11 @@
                             Administration<br>
                             Services
                         </div>
-                        <div class="button" data-show-block="3">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block mobile-blue">
+                    <div data-anim-serv="5" class="block mobile-blue hide" data-show-block="2">
                         <div class="icon">
                             {% include 'svg/s_directors.twig' %}
                         </div>
@@ -178,17 +193,17 @@
                             Nominee<br>
                             Directors
                         </div>
-                        <div class="button" data-show-block="2">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block no-mobile">
-                        <div class="bottomTriangle red"></div>
+                    <div data-anim-serv="6" class="block no-mobile hide">
+                        <div data-anim-serv="9" class="bottomTriangle red hide"></div>
                         <div class="icon"></div>
                         <div class="text"></div>
                         <div class="button"></div>
                     </div>
-                    <div class="block back">
+                    <div data-anim-serv="7" class="block back hide" data-show-block="6">
                         <div class="icon">
                             {% include 'svg/s_market.twig' %}
                         </div>
@@ -197,12 +212,12 @@
                             Research<br>
                             and Sales Support
                         </div>
-                        <div class="button" data-show-block="6">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block mobile-back">
-                        <div class="topTriangle blue no-mobile"></div>
+                    <div data-anim-serv="8" class="block mobile-back hide" data-show-block="5">
+                        <div data-anim-serv="9" class="topTriangle blue no-mobile hide"></div>
                         <div class="icon">
                             {% include 'svg/s_advisory.twig' %}
                         </div>
@@ -210,12 +225,12 @@
                             Legal<br>
                             Advisory
                         </div>
-                        <div class="button" data-show-block="5">
+                        <div class="button">
                             {% include 'svg/info_open.twig' %}
                         </div>
                     </div>
-                    <div class="block mobile">
-                        <div class="topTriangle red"></div>
+                    <div data-anim-serv="6" class="block mobile hide">
+                        <div data-anim-serv="9" class="topTriangle red hide"></div>
                         <div class="icon"></div>
                         <div class="text"></div>
                         <div class="button"></div>
@@ -223,14 +238,14 @@
                 </div>
             </div>
         </section>
-        <section id="request" class="request">
+        <section data-section="3" id="request" class="request">
             <div class="centerContainer">
                 <div class="titleText">
                     <span class="titleRed">Make</span><br>
                     <span class="titleWhite">request</span>
                 </div>
                 <div class="formHolder">
-                    <form class="requestForm">
+                    <form data-url="/" id="reqForm" class="requestForm" data-send="success">
                         <input data-request-type="all" type="hidden" name="optional" value="">
                         <div class="inputField">
                             <input type="text" name="name" placeholder="Your name, Company">
@@ -252,8 +267,24 @@
                             <div class="buttonHolder"></div>
                         </div>
                     </form>
+                    <div class="thanksMessage" data-send="thanks">
+                        <div class="message">
+                            Thank you, your request<br>
+                            sent successfully. Our representative will<br>
+                            contact you soon.<br>
+                        </div>
+                        <div class="button">
+                            <button data-return="form" type="button">send another</button>
+                            <div class="buttonHolder"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scrollDown up last">
+                <div data-anchor-link="5" href="#top" class="scrollDown up last">
+                    <div class="rectHolder">
+                        <div class="rect first"></div>
+                        <div class="rect"></div>
+                        <div class="rect"></div>
+                    </div>
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>

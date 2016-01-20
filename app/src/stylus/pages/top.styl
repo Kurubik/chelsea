@@ -22,10 +22,9 @@
   .menuContainer
     position relative
     margin 265px 0 0 0
-    top 0
     transform rotateX(0)
+    transform-origin 50% 100%
     &.hide
-      top 25px
       transform rotateX(90deg)
     +mq(0, 480px)
       margin 160px 0 0 0
@@ -92,6 +91,9 @@
             font-size 14px
           +mq(481px,767px)
             font-size 14px
+          &.light
+            color #cd2430
+            transition all 0.3s
           &:hover
             color #cd2430
             transition all 0.3s
@@ -141,12 +143,11 @@
       display block
   .textContainer
     position relative
-    transform rotateX(0) perspective(1000)
+    transform rotateX(0)
     transform-origin 0% 0%
     overflow hidden
     &.hide
-      transform rotateX(-90deg) perspective(1000)
-      transform-origin 0% 0%
+      transform rotateX(-90deg)
     .topText
       position absolute
       display inline-block

@@ -4,6 +4,10 @@
   &:focus
     outline none
 
+input:-webkit-autofill
+  -webkit-box-shadow 0 0 0 1000px #f6f3ef inset
+
+
 html,
 body
   width  100%
@@ -42,6 +46,11 @@ body
   position absolute
   margin-top -9px
   opacity 1
+  &:hover
+    .rectHolder
+      .rect
+        &.first
+          margin-top -18px
   &.hide
     opacity 0
   +mq(0, 699px)
@@ -67,6 +76,18 @@ body
     height 100%
     path, polygon
       fill #f6f3ef
+  .rectHolder
+    height 30px
+    overflow hidden
+    margin-bottom -27px
+    .rect
+      width 23px
+      height 12px
+      border 2px solid #f6f3ef
+      opacity 0.7
+      border-radius 2px
+      margin-bottom 2px
+      transition all 0.5s
 
 .footer
   height 200px
