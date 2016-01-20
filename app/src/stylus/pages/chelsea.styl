@@ -16,6 +16,8 @@
     margin 297px 0 0 45%
     z-index 9
     position relative
+    &.hide
+      margin 297px 0 0 120%
     +mq(850px,1170px)
       font-size 130px
       line-height 85px
@@ -35,8 +37,14 @@
       color #cd2430
     .titleWhite
       color #f6f3ef
+      &.hide
+        margin-right -250px
   .textContainer
     margin-top -4px
+    position relative
+    left 0
+    &.hide
+      left -2000px
     +mq(0, 480px)
       margin 0
     .chelseaText
@@ -55,6 +63,9 @@
       width 900px
       padding-top 57px
       min-width 320px
+      opacity 1
+      &.hide
+        opacity 0
       +mq(850px,1170px)
         width 100%
         font-size 15px
@@ -96,3 +107,17 @@
         transform skew(0)
         opacity 1
         margin 0
+  [data-anim-chel="0"]   //title text 
+    transition all 1s
+  [data-anim-chel="1"]   //white text
+    transition all 0.6s
+    transition-delay 0.8s
+  [data-anim-chel="2"]   //blue container
+    transition all 1s
+  [data-anim-chel="3"]   //text in container
+    transition all 1s
+    transition-delay 1s
+  [data-anim-chel="4"]   //scroll stuff
+    transition all 1s
+    transition-delay 1s    
+        

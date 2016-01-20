@@ -214,6 +214,9 @@ th {
   margin: 0 0 -2px 70px;
   padding-top: 330px;
 }
+.about .titleText.hide {
+  margin: 0 0 -2px -2000px;
+}
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .about .titleText {
     font-size: 130px;
@@ -247,6 +250,17 @@ th {
 }
 .about .titleText .titleWhite {
   color: #f6f3ef;
+  margin-left: 0;
+}
+.about .titleText .titleWhite.hide {
+  margin-left: -250px;
+}
+.about .textContainer {
+  position: relative;
+  left: 0;
+}
+.about .textContainer.hide {
+  left: 2000px;
 }
 .about .textContainer .aboutText {
   position: absolute;
@@ -266,6 +280,10 @@ th {
   right: 0;
   margin: 0 auto;
   min-width: 320px;
+  opacity: 1;
+}
+.about .textContainer .aboutText.hide {
+  opacity: 0;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .about .textContainer .aboutText {
@@ -336,6 +354,32 @@ th {
     opacity: 1;
   }
 }
+.about [data-anim-about="0"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.about [data-anim-about="1"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.about [data-anim-about="2"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.about [data-anim-about="3"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.about [data-anim-about="4"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
 .chelsea {
   background-image: url("../assets/images/london.jpg");
   height: 800px;
@@ -358,6 +402,9 @@ th {
   margin: 297px 0 0 45%;
   z-index: 9;
   position: relative;
+}
+.chelsea .titleText.hide {
+  margin: 297px 0 0 120%;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .chelsea .titleText {
@@ -392,8 +439,16 @@ th {
 .chelsea .titleText .titleWhite {
   color: #f6f3ef;
 }
+.chelsea .titleText .titleWhite.hide {
+  margin-right: -250px;
+}
 .chelsea .textContainer {
   margin-top: -4px;
+  position: relative;
+  left: 0;
+}
+.chelsea .textContainer.hide {
+  left: -2000px;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .chelsea .textContainer {
@@ -417,6 +472,10 @@ th {
   width: 900px;
   padding-top: 57px;
   min-width: 320px;
+  opacity: 1;
+}
+.chelsea .textContainer .chelseaText.hide {
+  opacity: 0;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .chelsea .textContainer .chelseaText {
@@ -486,6 +545,32 @@ th {
     margin: 0;
   }
 }
+.chelsea [data-anim-chel="0"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.chelsea [data-anim-chel="1"] {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+.chelsea [data-anim-chel="2"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.chelsea [data-anim-chel="3"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.chelsea [data-anim-chel="4"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
 * {
   margin: 0;
   padding: 0;
@@ -506,6 +591,11 @@ body {
   overflow: hidden;
   min-width: 320px;
 }
+.viewBlock {
+  position: fixed;
+  top: 70%;
+  opacity: 0;
+}
 .wrapper {
   max-width: 1366px;
   width: 100%;
@@ -518,6 +608,7 @@ body {
   margin: 0 auto;
 }
 .scrollDown {
+  cursor: pointer;
   display: block;
   width: 27px;
   height: 39px;
@@ -526,6 +617,10 @@ body {
   margin: 0 auto;
   position: absolute;
   margin-top: -9px;
+  opacity: 1;
+}
+.scrollDown.hide {
+  opacity: 0;
 }
 @media only screen and (min-width: 0) and (max-width: 699px) {
   .scrollDown {
@@ -593,7 +688,7 @@ body {
 }
 .footer .footerContainer {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1120px;
   margin: 0 auto;
   position: relative;
 }
@@ -822,6 +917,29 @@ body {
   width: 100%;
   max-width: 1366px;
   z-index: 99;
+  background-color: rgba(0,0,0,0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.menu.open {
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+.menu.open .aboutHeader .aboutLogo {
+  margin-left: -50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu.open .aboutHeader .aboutMenu {
+  margin-right: -50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu.open .aboutHeader .menuContainer .headerMenu {
+  height: 110px;
+  padding: 40px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .menu {
@@ -847,30 +965,31 @@ body {
     padding: 30px 0 0 0;
   }
 }
-.menu .aboutHeader.open {
-  background: #f6f3ef;
-}
 @media only screen and (min-width: 0) and (max-width: 767px) {
   .menu .aboutHeader.open {
     height: 240px;
   }
 }
-.menu .aboutHeader.open .aboutLogo {
-  display: none;
-}
 .menu .aboutHeader.open .aboutLogoOpen {
-  display: inline-block;
+  opacity: 1;
 }
 .menu .aboutHeader.open .menuContainer {
   display: block;
 }
 .menu .aboutHeader .aboutLogoOpen {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
   cursor: pointer;
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  z-index: 22;
   margin-left: 50px;
   vertical-align: middle;
   width: 50px;
   height: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .menu .aboutHeader .aboutLogoOpen {
@@ -885,14 +1004,24 @@ body {
 .menu .aboutHeader .aboutLogoOpen svg {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.menu .aboutHeader .aboutLogoOpen svg rect {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu .aboutHeader .aboutLogo {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
   cursor: pointer;
   margin-left: 50px;
   display: inline-block;
   vertical-align: middle;
   width: 50px;
   height: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .menu .aboutHeader .aboutLogo {
@@ -918,7 +1047,9 @@ body {
   margin-top: 9px;
   display: block;
   width: 26px;
-  height: 13px;
+  height: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .menu .aboutHeader .aboutMenu {
@@ -932,26 +1063,72 @@ body {
     height: 11px;
   }
 }
-.menu .aboutHeader .aboutMenu svg {
+.menu .aboutHeader .aboutMenu:hover .border-menu div.line-top {
+  top: -1px;
+}
+.menu .aboutHeader .aboutMenu:hover .border-menu div.line-middle {
+  top: 6px;
+}
+.menu .aboutHeader .aboutMenu:hover .border-menu div.line-bottom {
+  top: 14px;
+}
+.menu .aboutHeader .aboutMenu .border-menu {
   width: 100%;
   height: 100%;
 }
+.menu .aboutHeader .aboutMenu .border-menu div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #f6f3ef;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.menu .aboutHeader .aboutMenu .border-menu div.line-top {
+  top: 3px;
+}
+.menu .aboutHeader .aboutMenu .border-menu div.line-middle {
+  top: 6px;
+}
+.menu .aboutHeader .aboutMenu .border-menu div.line-bottom {
+  top: 9px;
+}
+.menu .aboutHeader .aboutMenu svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .menu .aboutHeader .aboutMenu svg path {
   fill: #f6f3ef;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .menu .aboutHeader .menuContainer {
-  display: none;
+  position: relative;
+  display: block;
 }
 .menu .aboutHeader .menuContainer .headerMenu {
   position: absolute;
   list-style: none;
   z-index: 2;
-  width: 610px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  height: 0;
   left: 0;
   right: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
   margin: 0 auto;
-  padding-top: 12px;
-  margin-top: -38px;
+  padding: 0;
+  top: -70px;
+  background: #f6f3ef;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .menu .aboutHeader .menuContainer .headerMenu {
@@ -1024,7 +1201,7 @@ body {
 .popupContainer .Block {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  max-width: 1280px;
+  max-width: 1366px;
   margin: 0 auto;
   position: absolute;
   width: 100%;
@@ -1060,7 +1237,7 @@ body {
 }
 .popupContainer .textBlock {
   background: #f6f3ef;
-  max-width: 1140px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 70px;
 }
@@ -1925,7 +2102,16 @@ body {
   height: 100%;
 }
 .top .menuContainer {
+  position: relative;
   margin: 265px 0 0 0;
+  top: 0;
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+}
+.top .menuContainer.hide {
+  top: 25px;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .top .menuContainer {
@@ -1971,6 +2157,10 @@ body {
   right: 0;
   margin: 0 auto;
   padding-top: 12px;
+  opacity: 1;
+}
+.top .menuContainer .menu.hide {
+  opacity: 0;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .top .menuContainer .menu {
@@ -2055,6 +2245,40 @@ body {
   right: 0;
   margin-top: 15px;
   z-index: 9;
+  opacity: 1;
+}
+.top .menuButton.hide {
+  opacity: 0;
+}
+.top .menuButton:hover .border-menu div.line-top {
+  top: -1px;
+}
+.top .menuButton:hover .border-menu div.line-middle {
+  top: 6px;
+}
+.top .menuButton:hover .border-menu div.line-bottom {
+  top: 14px;
+}
+.top .menuButton .border-menu {
+  width: 100%;
+  height: 100%;
+}
+.top .menuButton .border-menu div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #f6f3ef;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.top .menuButton .border-menu div.line-top {
+  top: 3px;
+}
+.top .menuButton .border-menu div.line-middle {
+  top: 6px;
+}
+.top .menuButton .border-menu div.line-bottom {
+  top: 9px;
 }
 .top .menuButton svg {
   width: 100%;
@@ -2067,6 +2291,20 @@ body {
   .top .menuButton {
     display: block;
   }
+}
+.top .textContainer {
+  position: relative;
+  -webkit-transform: rotateX(0) perspective(1000);
+  transform: rotateX(0) perspective(1000);
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  overflow: hidden;
+}
+.top .textContainer.hide {
+  -webkit-transform: rotateX(-90deg) perspective(1000);
+  transform: rotateX(-90deg) perspective(1000);
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
 }
 .top .textContainer .topText {
   position: absolute;
@@ -2087,6 +2325,10 @@ body {
   right: 0;
   margin: 0 auto;
   min-width: 320px;
+  opacity: 1;
+}
+.top .textContainer .topText.hide {
+  opacity: 0;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .top .textContainer .topText {
@@ -2120,7 +2362,7 @@ body {
 }
 .top .textContainer .textHolder {
   display: block;
-  opacity: 0.8;
+  opacity: 1;
   height: 0;
   border-top: 170px solid #cd2430;
   border-left: 200px solid transparent;
@@ -2157,4 +2399,32 @@ body {
     opacity: 1;
     background: #cd2430;
   }
+}
+.top [data-anim-top="0"] {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.top [data-anim-top="1"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.top [data-anim-top="2"] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.top [data-anim-top="3"] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.top [data-anim-top="4"] {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.7s;
+  transition-delay: 0.7s;
 }

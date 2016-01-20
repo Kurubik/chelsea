@@ -20,7 +20,13 @@
       width 100%
       height 100%
   .menuContainer
+    position relative
     margin 265px 0 0 0
+    top 0
+    transform rotateX(0)
+    &.hide
+      top 25px
+      transform rotateX(90deg)
     +mq(0, 480px)
       margin 160px 0 0 0
     .menuHolder
@@ -49,6 +55,9 @@
       right 0
       margin 0 auto
       padding-top 12px
+      opacity 1
+      &.hide
+        opacity 0
       +mq(850px,1170px)
         width 575px
       +mq(768px,849px)
@@ -96,6 +105,33 @@
     right 0
     margin-top 15px
     z-index 9
+    opacity 1
+    &.hide
+      opacity 0
+    &:hover
+      .border-menu
+        div
+          &.line-top
+            top -1px
+          &.line-middle
+            top 6px
+          &.line-bottom
+            top 14px
+    .border-menu
+      width 100%
+      height 100%
+      div
+        position relative
+        width 100%
+        height 2px
+        background #f6f3ef
+        transition all 0.3s
+        &.line-top
+          top 3px
+        &.line-middle
+          top 6px
+        &.line-bottom
+          top 9px
     svg
       width 100%
       height 100%
@@ -104,6 +140,13 @@
     +mq(0, 480px)
       display block
   .textContainer
+    position relative
+    transform rotateX(0) perspective(1000)
+    transform-origin 0% 0%
+    overflow hidden
+    &.hide
+      transform rotateX(-90deg) perspective(1000)
+      transform-origin 0% 0%
     .topText
       position absolute
       display inline-block
@@ -122,6 +165,9 @@
       right 0
       margin 0 auto
       min-width 320px
+      opacity 1
+      &.hide
+        opacity 0
       +mq(850px,1170px)
         font-size 15px
         width 100%
@@ -142,7 +188,7 @@
         height 200px
     .textHolder
       display block
-      opacity 0.8
+      opacity 1
       height 0
       border-top 170px solid #cd2430
       border-left 200px solid transparent
@@ -167,3 +213,18 @@
         border none
         opacity 1
         background #cd2430
+
+  [data-anim-top="0"]         //menu container
+    transition all 0.7s
+  [data-anim-top="1"]         //text container
+    transition all 1s
+    transition-delay 0.3s
+  [data-anim-top="2"]         //menu
+    transition all 0.5s
+    transition-delay 0.3s
+  [data-anim-top="3"]         //text
+    transition all 0.5s
+    transition-delay 0.5s
+  [data-anim-top="4"]         //scroll stuff
+    transition all 0.5s
+    transition-delay 0.7s

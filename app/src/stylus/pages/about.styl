@@ -16,6 +16,8 @@
     text-align left
     margin 0 0 -2px 70px
     padding-top 330px
+    &.hide
+      margin 0 0 -2px -2000px
     +mq(850px,1170px)
       font-size 130px
       line-height 85px
@@ -36,7 +38,14 @@
       color #cd2430
     .titleWhite
       color #f6f3ef
+      margin-left 0
+      &.hide
+        margin-left -250px
   .textContainer
+    position relative
+    left 0
+    &.hide
+      left 2000px
     .aboutText
       position absolute
       font-family BanderaPro
@@ -54,6 +63,9 @@
       right 0
       margin 0 auto
       min-width 320px
+      opacity 1
+      &.hide
+        opacity 0
       +mq(850px,1170px)
         width 100%
         font-size 15px
@@ -96,3 +108,17 @@
         transform skew(0deg)
         margin 0
         opacity 1
+
+  [data-anim-about="0"]   //title text
+    transition all 1s
+  [data-anim-about="1"]   //white text
+    transition all 1s
+    transition-delay 1s
+  [data-anim-about="2"]   //blue container
+    transition all 1s
+  [data-anim-about="3"]   //text in container
+    transition all 1s
+    transition-delay 1s
+  [data-anim-about="4"]   //scroll stuff
+    transition all 1s
+    transition-delay 1s

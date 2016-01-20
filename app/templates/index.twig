@@ -1,15 +1,20 @@
 {% extends 'layout.twig' %}
 {% block content %}
     {% include 'popups/popups.twig' %}
+<div data-view="block" class="viewBlock"></div>
 <div class="container">
     <div class="wrapper">
-        <section class="menu">
+        <section data-main-menu="menu" class="menu">
             <div class="aboutHeader" data-menu="0">
                 <div class="aboutLogo">
                     {% include 'svg/sign_bw.twig' %}
                 </div>
                 <div class="aboutMenu" data-open-menu="0">
-                    {% include 'svg/menu.twig' %}
+                    <div class="border-menu">
+                        <div class="line-top"></div>
+                        <div class="line-middle"></div>
+                        <div class="line-bottom"></div>
+                    </div>
                 </div>
                 <div class="aboutLogoOpen">
                     {% include 'svg/sign_color.twig' %}
@@ -22,7 +27,6 @@
                         <li><a href="#request">Request</a></li>
                         <li><a href="#contacts">Contacts</a></li>
                     </ul>
-                    <div class="menuHolder"></div>
                 </div>
             </div>
         </section>
@@ -31,40 +35,44 @@
                 <div class="fullLogo">
                     {% include 'svg/logo_full.twig' %}
                 </div>
-                <div class="menuContainer">
-                    <ul class="menu">
+                <div data-anim-top="0" class="menuContainer hide">
+                    <ul data-anim-top="2" class="menu hide">
                         <li><a href="#company">Company</a></li>
                         <li><a href="#chelsea">Chelsea</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#request">Request</a></li>
                         <li><a href="#contacts">Contacts</a></li>
                     </ul>
-                    <div class="menuButton">
-                        {% include 'svg/menu.twig' %}
+                    <div data-anim-top="2" class="menuButton hide">
+                        <div class="border-menu">
+                            <div class="line-top"></div>
+                            <div class="line-middle"></div>
+                            <div class="line-bottom"></div>
+                        </div>
                     </div>
                     <div class="menuHolder"></div>
                 </div>
-                <div class="textContainer">
-                    <div class="topText">
+                <div data-anim-top="1" class="textContainer hide">
+                    <div data-anim-top="3" class="topText hide">
                         Chelsea Partners Consulting Ltd is a specialist provider of<br>
                         consulting services for companies looking to register a legal entity and outsource parts of<br>
                         their business operations into the UK and Continental Europe.
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div class="scrollDown first">
+                <div data-anim-top="4" class="scrollDown first hide">
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>
         </section>
         <section id="company" class="about">
             <div class="centerContainer">
-                <div class="titleText">
+                <div data-anim-about="0" class="titleText hide">
                     <span class="titleRed">About a</span><br>
-                    <span class="titleWhite">company</span>
+                    <span data-anim-about="1" class="titleWhite hide">company</span>
                 </div>
-                <div class="textContainer">
-                    <div class="aboutText">
+                <div data-anim-about="2" class="textContainer hide">
+                    <div data-anim-about="3" data-start-anim="about" class="aboutText hide">
                         CPC offers a full range of professional services for companies looking to expand and outsource parts of their business<br>
                         operation into the UK and Continental Europe. Our services range from a simple Company<br>
                         Registration and Accounting / Legal Support to a more sophisticated Market Research and Sales Growth<br>
@@ -72,19 +80,19 @@
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div class="scrollDown second">
+                <div data-anim-about="4" class="scrollDown second hide">
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>
         </section>
         <section id="chelsea" class="chelsea">
             <div class="centerContainer">
-                <div class="titleText">
+                <div data-anim-chel="0" class="titleText hide">
                     <span class="titleRed">London,</span><br>
-                    <span class="titleWhite">Chelsea</span>
+                    <span data-anim-chel="1" class="titleWhite hide">Chelsea</span>
                 </div>
-                <div class="textContainer">
-                    <div class="chelseaText">
+                <div data-anim-chel="2" class="textContainer hide">
+                    <div data-anim-chel="3" data-start-anim="chelsea" class="chelseaText hide">
                         Based in Chelsea, London, CPC team is a group of professionals with a background in London’s Tier 1 Investment Banks,<br>
                         Private Banks, Law Firms and Property Consulting firms with over 30 years of accumulated<br>
                         experience in exposure to UK’s professional services sector. Our aim is to ensure that your business operation<br>
@@ -92,7 +100,7 @@
                     </div>
                     <div class="textHolder"></div>
                 </div>
-                <div class="scrollDown third">
+                <div data-anim-chel="4" class="scrollDown third hide">
                     {% include 'svg/scroll_down_up.twig' %}
                 </div>
             </div>

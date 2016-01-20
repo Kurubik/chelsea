@@ -17,6 +17,11 @@ body
   overflow hidden
   min-width 320px
 
+.viewBlock
+  position fixed
+  top 70%
+  opacity 0
+
 .wrapper
   max-width 1366px
   width 100%
@@ -27,6 +32,7 @@ body
     height 100%
     margin 0 auto
 .scrollDown
+  cursor pointer
   display block
   width 27px
   height 39px
@@ -35,6 +41,9 @@ body
   margin 0 auto
   position absolute
   margin-top -9px
+  opacity 1
+  &.hide
+    opacity 0
   +mq(0, 699px)
     width 21px
     height 31px
@@ -77,7 +86,7 @@ body
     padding 50px 45px 29px 45px
   .footerContainer
     width 100%
-    max-width 1180px
+    max-width 1120px
     margin 0 auto
     position relative
     +mq(980px,1170px)
