@@ -38,8 +38,8 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = array(
     'host' => 'smtp.gmail.com',
     'port' => '465',
-    'username' => '',
-    'password' => '',
+    'username' => 'vcgmegamail@gmail.com',
+    'password' => 'Finger21!',
     'encryption' => 'ssl',
     'auth_mode'  => 'login'
 );

@@ -20,6 +20,7 @@
   right 0
   margin 0 auto
   .Block
+    overflow hidden
     transition all 0.5s
     max-width 1366px
     margin 0 auto
@@ -42,6 +43,7 @@
     height 25px
     margin 10% 40px 40px auto
     opacity 1
+    will-change opacity, margin
     &.hide
       opacity 0
       margin 10% -200px 40px auto
@@ -70,6 +72,7 @@
       text-align center
       padding 13px 0 67px 0
       opacity 1
+      will-change opacity
       &.hide
         opacity 0
       +mq(768px,849px)
@@ -89,6 +92,7 @@
       line-height 26px
       text-align center
       padding-bottom 60px
+      will-change opacity
       &.hide
         opacity 0
       +mq(768px,849px)
@@ -108,6 +112,7 @@
       margin 20px auto 0 auto
       transform-origin 50% 0%
       transform scaleX(1)
+      will-change transform
       &.hide
         transform scaleX(0)
       +mq(0, 480px)

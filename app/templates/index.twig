@@ -1,5 +1,6 @@
 {% extends 'layout.twig' %}
 {% block content %}
+    <input type="hidden" id="version" value="desktop">
     {% include 'popups/popups.twig' %}
 <div data-view="block" class="viewBlock"></div>
 <div class="container">
@@ -20,7 +21,7 @@
                     {% include 'svg/sign_color.twig' %}
                 </div>
                 <div class="menuContainer">
-                    <ul data-remove-menu="0" class="headerMenu">
+                    <ul data-remove-menu="0" data-menu="0" class="headerMenu">
                         <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
                         <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
                         <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
@@ -32,7 +33,7 @@
         </section>
         <section data-section="5" id="top" class="top">
             <div class="centerContainer">
-                <div class="fullLogo">
+                <div data-anim-top="5" class="fullLogo hide">
                     {% include 'svg/logo_full.twig' %}
                 </div>
                 <div data-anim-top="0" class="menuContainer hide">
@@ -43,7 +44,7 @@
                         <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
                         <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
                     </ul>
-                    <div data-anim-top="2" class="menuButton hide">
+                    <div data-anim-top="2" data-open-menu="0" class="menuButton hide">
                         <div class="border-menu">
                             <div class="line-top"></div>
                             <div class="line-middle"></div>
@@ -245,7 +246,7 @@
                     <span class="titleWhite">request</span>
                 </div>
                 <div class="formHolder">
-                    <form data-url="/" id="reqForm" class="requestForm" data-send="success">
+                    <form data-url="/{{ app.request.locale }}/api/send-mail/" id="reqForm" class="requestForm" data-send="success">
                         <input data-request-type="all" type="hidden" name="optional" value="">
                         <div class="inputField">
                             <input type="text" name="name" placeholder="Your name, Company">

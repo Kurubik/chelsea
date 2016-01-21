@@ -16,6 +16,7 @@
     text-align left
     margin 0 0 -2px 70px
     padding-top 330px
+    will-change transform
     &.hide
       transform translateX(-1000px)
     +mq(850px,1170px)
@@ -39,11 +40,13 @@
     .titleWhite
       color #f6f3ef
       margin-left 0
+      will-change transform
       &.hide
         transform translateX(-250px)
   .textContainer
     position relative
     left 0
+    will-change transform
     &.hide
       transform translateX(2000px)
     .aboutText
@@ -64,6 +67,7 @@
       margin 0 auto
       min-width 320px
       opacity 1
+      will-change opacity
       &.hide
         opacity 0
       +mq(850px,1170px)
@@ -113,7 +117,7 @@
     transition all 1s
   [data-anim-about="1"]   //white text
     transition all 1s
-    transition-delay 1s
+    transition-delay 0.2s
   [data-anim-about="2"]   //blue container
     transition all 1s
   [data-anim-about="3"]   //text in container

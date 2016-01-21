@@ -46,6 +46,8 @@ body
   position absolute
   margin-top -9px
   opacity 1
+  will-change opacity
+  z-index 79
   &:hover
     .rectHolder
       .rect
@@ -80,6 +82,9 @@ body
     height 30px
     overflow hidden
     margin-bottom -27px
+    +mq(0, 699px)
+      height 24px
+      margin-bottom -21px
     .rect
       width 23px
       height 12px
@@ -88,6 +93,10 @@ body
       border-radius 2px
       margin-bottom 2px
       transition all 0.5s
+      will-change margin
+      +mq(0, 699px)
+        width 17px
+        height 9px
 
 .footer
   height 200px
