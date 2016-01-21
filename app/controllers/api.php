@@ -11,7 +11,7 @@ use app\data\Data;
 $api = $app['controllers_factory'];
 
 $api->post('/send-mail/', function() use ($app) {
-    $request = $_POST
+    $request = $_POST;
     $message = \Swift_Message::newInstance()
         ->setSubject('Chelsea Request')
         ->setFrom(array('benzins@gmail.com'))
