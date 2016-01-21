@@ -78,6 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
         var block = $(this).attr('data-request');
         var title = $('[data-requet-title="' + block + '"]').text();
         $('[data-request-type]').val(title);
+        poupAnimation('[data-block="'+ block + '"]', 'end');
+        setTimeout( function() {
+            $('[data-block="'+ block + '"]').removeClass('open');
+            $('[data-popup]').removeClass('dark');
+            $('[data-block]').removeClass('show');
+            $('[data-popup]').removeClass('show');
+        }, 1000);
+        $('html, body').animate({
+            scrollTop: $('#request').offset().top
+        }, 500);
     });
 
     var animationAbout = $('[data-start-anim="about"]').offset();
