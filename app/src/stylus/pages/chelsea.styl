@@ -17,7 +17,7 @@
     z-index 9
     position relative
     &.hide
-      margin 297px 0 0 120%
+      transform translateX(1000px)
     +mq(850px,1170px)
       font-size 130px
       line-height 85px
@@ -38,13 +38,13 @@
     .titleWhite
       color #f6f3ef
       &.hide
-        margin-right -250px
+        transform translateX(250px)
   .textContainer
     margin-top -4px
     position relative
     left 0
     &.hide
-      left -2000px
+      transform translateX(-2000px)
     +mq(0, 480px)
       margin 0
     .chelseaText

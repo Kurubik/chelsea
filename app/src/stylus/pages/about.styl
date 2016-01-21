@@ -17,7 +17,7 @@
     margin 0 0 -2px 70px
     padding-top 330px
     &.hide
-      margin 0 0 -2px -2000px
+      transform translateX(-1000px)
     +mq(850px,1170px)
       font-size 130px
       line-height 85px
@@ -40,12 +40,12 @@
       color #f6f3ef
       margin-left 0
       &.hide
-        margin-left -250px
+        transform translateX(-250px)
   .textContainer
     position relative
     left 0
     &.hide
-      left 2000px
+      transform translateX(2000px)
     .aboutText
       position absolute
       font-family BanderaPro

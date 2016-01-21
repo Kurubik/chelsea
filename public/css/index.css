@@ -215,7 +215,8 @@ th {
   padding-top: 330px;
 }
 .about .titleText.hide {
-  margin: 0 0 -2px -2000px;
+  -webkit-transform: translateX(-1000px);
+  transform: translateX(-1000px);
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .about .titleText {
@@ -253,14 +254,16 @@ th {
   margin-left: 0;
 }
 .about .titleText .titleWhite.hide {
-  margin-left: -250px;
+  -webkit-transform: translateX(-250px);
+  transform: translateX(-250px);
 }
 .about .textContainer {
   position: relative;
   left: 0;
 }
 .about .textContainer.hide {
-  left: 2000px;
+  -webkit-transform: translateX(2000px);
+  transform: translateX(2000px);
 }
 .about .textContainer .aboutText {
   position: absolute;
@@ -404,7 +407,8 @@ th {
   position: relative;
 }
 .chelsea .titleText.hide {
-  margin: 297px 0 0 120%;
+  -webkit-transform: translateX(1000px);
+  transform: translateX(1000px);
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .chelsea .titleText {
@@ -440,7 +444,8 @@ th {
   color: #f6f3ef;
 }
 .chelsea .titleText .titleWhite.hide {
-  margin-right: -250px;
+  -webkit-transform: translateX(250px);
+  transform: translateX(250px);
 }
 .chelsea .textContainer {
   margin-top: -4px;
@@ -448,7 +453,8 @@ th {
   left: 0;
 }
 .chelsea .textContainer.hide {
-  left: -2000px;
+  -webkit-transform: translateX(-2000px);
+  transform: translateX(-2000px);
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .chelsea .textContainer {
@@ -1860,10 +1866,12 @@ body {
   transform: scale(0);
 }
 .services .blocks .block:hover .icon {
-  margin-top: 100px;
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px);
 }
 .services .blocks .block:hover .button {
-  bottom: 90px;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 .services .blocks .block.mobile {
   display: none;
@@ -2119,6 +2127,9 @@ body {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.services .blocks .block .text.hide {
+  opacity: 0;
+}
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .services .blocks .block .text {
     font-size: 16px;
@@ -2151,6 +2162,10 @@ body {
   margin: 46px auto 48px auto;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+.services .blocks .block .icon.hide {
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px);
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .services .blocks .block .icon {
@@ -2202,6 +2217,10 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.services .blocks .block .button.hide {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   .services .blocks .block .button {
     width: 21px;
@@ -2234,59 +2253,185 @@ body {
 .services .blocks .block .button svg polygon {
   fill: #f6f3ef;
 }
-.services [data-anim-serv="0"] {
+.services .block[data-anim-serv="0"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-.services [data-anim-serv="1"] {
+.services .block[data-anim-serv="0"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
-.services [data-anim-serv="2"] {
+.services .block[data-anim-serv="0"] [data-anim-serv="12"] {
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transition-delay: 2s;
-  transition-delay: 2s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
-.services [data-anim-serv="3"] {
+.services .block[data-anim-serv="0"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.services .block[data-anim-serv="1"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.services .block[data-anim-serv="1"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
 }
-.services [data-anim-serv="4"] {
+.services .block[data-anim-serv="1"] [data-anim-serv="12"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.services .block[data-anim-serv="1"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.services .block[data-anim-serv="2"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+}
+.services .block[data-anim-serv="3"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.services .block[data-anim-serv="3"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 1.5s;
   transition-delay: 1.5s;
 }
-.services [data-anim-serv="5"] {
+.services .block[data-anim-serv="3"] [data-anim-serv="12"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.services .block[data-anim-serv="3"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.services .block[data-anim-serv="4"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.services .block[data-anim-serv="4"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 2s;
   transition-delay: 2s;
 }
-.services [data-anim-serv="6"] {
+.services .block[data-anim-serv="4"] [data-anim-serv="12"] {
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transition-delay: 1s;
-  transition-delay: 1s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
 }
-.services [data-anim-serv="7"] {
+.services .block[data-anim-serv="4"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+}
+.services .block[data-anim-serv="5"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+}
+.services .block[data-anim-serv="5"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 2.5s;
   transition-delay: 2.5s;
 }
-.services [data-anim-serv="8"] {
+.services .block[data-anim-serv="5"] [data-anim-serv="12"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2.5s;
+  transition-delay: 2.5s;
+}
+.services .block[data-anim-serv="5"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2.5s;
+  transition-delay: 2.5s;
+}
+.services .block[data-anim-serv="6"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.services .block[data-anim-serv="7"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 2.5s;
+  transition-delay: 2.5s;
+}
+.services .block[data-anim-serv="7"] [data-anim-serv="11"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 3s;
   transition-delay: 3s;
+}
+.services .block[data-anim-serv="7"] [data-anim-serv="12"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3s;
+  transition-delay: 3s;
+}
+.services .block[data-anim-serv="7"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3s;
+  transition-delay: 3s;
+}
+.services .block[data-anim-serv="8"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3s;
+  transition-delay: 3s;
+}
+.services .block[data-anim-serv="8"] [data-anim-serv="11"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3.5s;
+  transition-delay: 3.5s;
+}
+.services .block[data-anim-serv="8"] [data-anim-serv="12"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3.5s;
+  transition-delay: 3.5s;
+}
+.services .block[data-anim-serv="8"] [data-anim-serv="13"] {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-delay: 3.5s;
+  transition-delay: 3.5s;
 }
 .services [data-anim-serv="9"] {
   -webkit-transition: all 1s;

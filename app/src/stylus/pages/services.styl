@@ -73,9 +73,9 @@
           opacity 0
           transform scale(0)
         .icon
-          margin-top 100px
+          transform translateY(70px)
         .button
-          bottom 90px
+          transform translateY(-50px)
       &.mobile
         display none
         +mq(481px,767px)
@@ -109,6 +109,7 @@
         background-color #747371
         &.show
           background-color #3d4574
+
       &.mobile-blue
         +mq(481px,767px)
           background-color #3d4574
@@ -227,6 +228,8 @@
         transition 0.3s
         opacity 1
         transform scale(1)
+        &.hide
+          opacity 0
         +mq(850px,1170px)
           font-size 16px
           line-height 20px
@@ -246,6 +249,8 @@
         display block
         margin 46px auto 48px auto
         transition all 0.4s
+        &.hide
+          transform translateY(70px)
         +mq(850px,1170px)
           width 69px
           height 69px
@@ -278,6 +283,8 @@
         height 21px
         transform rotate(180deg)
         transition all 0.4s
+        &.hide
+          transform translateY(-50px)
         +mq(850px,1170px)
           width 21px
           height 17px
@@ -296,34 +303,96 @@
           path, polygon
             fill #f6f3ef
 
-  [data-anim-serv="0"]
+  .block[data-anim-serv="0"]
     transition all 1s
     transition-delay 0.1s
-  [data-anim-serv="1"]
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 0.5s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 0.5s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 0.5s
+  .block[data-anim-serv="1"]
     transition all 1s
     transition-delay 0.5s
-  [data-anim-serv="2"]
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 1s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 1s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 1s
+  .block[data-anim-serv="2"]        //empty
     transition all 1s
     transition-delay 2s
-  [data-anim-serv="3"]
+  .block[data-anim-serv="3"]
     transition all 1s
     transition-delay 1s
-  [data-anim-serv="4"]          //center block
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 1.5s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 1.5s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 1.5s
+  .block[data-anim-serv="4"]          //center block
     transition all 1s
     transition-delay 1.5s
-  [data-anim-serv="5"]
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 2s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 2s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 2s
+  .block[data-anim-serv="5"]
     transition all 1s
     transition-delay 2s
-  [data-anim-serv="6"]
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 2.5s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 2.5s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 2.5s
+  .block[data-anim-serv="6"]          //empty
     transition all 1s
     transition-delay 1s
-  [data-anim-serv="7"]
+  .block[data-anim-serv="7"]
     transition all 1s
     transition-delay 2.5s
-  [data-anim-serv="8"]
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 3s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 3s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 3s
+  .block[data-anim-serv="8"]
     transition all 1s
     transition-delay 3s
+    [data-anim-serv="11"]       //icons
+      transition all 1s
+      transition-delay 3.5s
+    [data-anim-serv="12"]       //text
+      transition all 1s
+      transition-delay 3.5s
+    [data-anim-serv="13"]       //buttons
+      transition all 1s
+      transition-delay 3.5s
   [data-anim-serv="9"]          //triangles
     transition all 1s
     transition-delay 3.5s
-

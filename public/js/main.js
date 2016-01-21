@@ -125,19 +125,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function servicesAnimation() {
-        $('[data-anim-serv="0"]').removeClass('hide');
-        $('[data-anim-serv="1"]').removeClass('hide');
-        $('[data-anim-serv="2"]').removeClass('hide');
-        $('[data-anim-serv="3"]').removeClass('hide');
-        $('[data-anim-serv="4"]').removeClass('hide');
-        $('[data-anim-serv="5"]').removeClass('hide');
-        $('[data-anim-serv="6"]').removeClass('hide');
-        $('[data-anim-serv="7"]').removeClass('hide');
-        $('[data-anim-serv="8"]').removeClass('hide');
-        $('[data-anim-serv="9"]').removeClass('hide');
+        for(var i = 0; i < 14; i++) {
+                removeHideClass(i);
+        }
         setTimeout( function() {
             $('[data-anim-serv="4"]').addClass('show');
         }, 3000);
+        setTimeout( function() {
+            $('[data-anim-serv]').each(function() {
+                $(this).removeAttr('data-anim-serv');
+            });
+        }, 5000);
+    }
+
+
+    function removeHideClass(num) {
+        $('[data-anim-serv="' + num +'"]').removeClass('hide');
     }
 
     function poupAnimation(popupBlock, direction) {
@@ -164,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function getsectionTop(block) {
         return $('[data-section="' + block + '"]').offset().top;
     }
+
     function lightMenu() {
         var bottom = false;
         ($(window).scrollTop() + $(window).height() == $(document).height()) ? (bottom = true) : (bottom = false);
