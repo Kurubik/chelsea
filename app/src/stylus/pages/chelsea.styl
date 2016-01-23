@@ -38,9 +38,9 @@
       color #cd2430
     .titleWhite
       color #f6f3ef
-      will-change transform
+      will-change margin
       &.hide
-        transform translateX(250px)
+        margin-right -250px
   .textContainer
     margin-top -4px
     position relative
@@ -106,11 +106,11 @@
         width 678px
         margin-left -2%
       +mq(0, 480px)
-        height 274px
+        height 278px
         width 100%
         transform skew(0)
         opacity 1
-        margin 0
+        margin -4px 0 0 0
   [data-anim-chel="0"]   //title text 
     transition all 1s
   [data-anim-chel="1"]   //white text

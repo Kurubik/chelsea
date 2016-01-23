@@ -253,11 +253,10 @@ th {
 .about .titleText .titleWhite {
   color: #f6f3ef;
   margin-left: 0;
-  will-change: transform;
+  will-change: margin;
 }
 .about .titleText .titleWhite.hide {
-  -webkit-transform: translateX(-250px);
-  transform: translateX(-250px);
+  margin-left: -250px;
 }
 .about .textContainer {
   position: relative;
@@ -447,11 +446,10 @@ th {
 }
 .chelsea .titleText .titleWhite {
   color: #f6f3ef;
-  will-change: transform;
+  will-change: margin;
 }
 .chelsea .titleText .titleWhite.hide {
-  -webkit-transform: translateX(250px);
-  transform: translateX(250px);
+  margin-right: -250px;
 }
 .chelsea .textContainer {
   margin-top: -4px;
@@ -551,12 +549,12 @@ th {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .chelsea .textContainer .textHolder {
-    height: 274px;
+    height: 278px;
     width: 100%;
     -webkit-transform: skew(0);
     transform: skew(0);
     opacity: 1;
-    margin: 0;
+    margin: -4px 0 0 0;
   }
 }
 .chelsea [data-anim-chel="0"] {
@@ -599,6 +597,9 @@ html,
 body {
   width: 100%;
   height: auto;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container {
   width: 100%;
@@ -611,6 +612,7 @@ body {
 .viewBlock {
   position: fixed;
   top: 70%;
+  width: 1px;
   opacity: 0;
 }
 .wrapper {
@@ -693,11 +695,11 @@ body {
   }
 }
 .scrollDown .rectHolder .rect {
-  width: 23px;
-  height: 12px;
-  border: 2px solid #f6f3ef;
-  opacity: 0.7;
-  border-radius: 2px;
+  width: 24px;
+  height: 13px;
+  border: 1px solid #f6f3ef;
+  opacity: 1;
+  border-radius: 0;
   margin-bottom: 2px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -705,8 +707,8 @@ body {
 }
 @media only screen and (min-width: 0) and (max-width: 699px) {
   .scrollDown .rectHolder .rect {
-    width: 17px;
-    height: 9px;
+    width: 18px;
+    height: 10px;
   }
 }
 .footer {
@@ -814,6 +816,17 @@ body {
   line-height: 22px;
   text-align: left;
 }
+.footer .footerContainer .phone a {
+  color: #242424;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.footer .footerContainer .phone a:hover {
+  color: #cd2430;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
 @media only screen and (min-width: 980px) and (max-width: 1170px) {
   .footer .footerContainer .phone {
     font-size: 14px;
@@ -876,6 +889,18 @@ body {
     text-align: center;
   }
 }
+.footer .footerContainer .ltd a svg path,
+.footer .footerContainer .ltd a svg polygon {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+  fill: #cd2430;
+}
+.footer .footerContainer .ltd a:hover svg path,
+.footer .footerContainer .ltd a:hover svg polygon {
+  fill: #242424;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
 .footer .footerContainer .ltd .icon {
   vertical-align: middle;
   display: inline-block;
@@ -895,9 +920,13 @@ body {
 .footer .footerContainer .ltd .icon svg {
   width: 100%;
   height: 100%;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 .footer .footerContainer .ltd .icon svg path,
 .footer .footerContainer .ltd .icon svg polygon {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
   fill: #cd2430;
 }
 .footer .footerContainer .social {
@@ -954,6 +983,12 @@ body {
   height: 50px;
   margin: -15px 0 0 -15px;
 }
+.footer .footerContainer .social .socialList li:hover svg path,
+.footer .footerContainer .social .socialList li:hover svg polygon {
+  fill: #cd2430;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
 .footer .footerContainer .social .socialList li svg {
   width: 100%;
   height: 100%;
@@ -961,6 +996,8 @@ body {
 .footer .footerContainer .social .socialList li svg path,
 .footer .footerContainer .social .socialList li svg polygon {
   fill: #242424;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 .menu {
   position: fixed;
@@ -973,6 +1010,16 @@ body {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
   will-change: height, background;
+}
+.menu.hide {
+  -webkit-transform: translateY(-110px);
+  transform: translateY(-110px);
+}
+@media only screen and (min-width: 0) and (max-width: 767px) {
+  .menu.hide {
+    -webkit-transform: translateY(-240px);
+    transform: translateY(-240px);
+  }
 }
 .menu.open {
   height: 100%;
@@ -1010,6 +1057,12 @@ body {
   box-sizing: border-box;
   padding: 40px 0;
   position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 0) and (max-width: 767px) {
+  .menu .aboutHeader {
+    overflow: visible;
+  }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .menu .aboutHeader {
@@ -1018,24 +1071,27 @@ body {
 }
 .menu .aboutHeader.open .aboutLogoOpen {
   opacity: 1;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 .menu .aboutHeader.open .menuContainer {
   display: block;
 }
 .menu .aboutHeader .aboutLogoOpen {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.7s;
+  transition-delay: 0.7s;
   cursor: pointer;
   display: inline-block;
   opacity: 0;
-  position: relative;
+  position: absolute;
   z-index: 22;
-  margin-left: 50px;
+  top: 40px;
+  left: 50px;
   vertical-align: middle;
   width: 50px;
   height: 30px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   will-change: opacity;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -1258,6 +1314,8 @@ body {
 .popupContainer.show {
   display: block;
   background: rgba(36,36,36,0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .popupContainer.show.dark {
   background: rgba(36,36,36,0.5);
@@ -1413,29 +1471,75 @@ body {
   will-change: transform;
 }
 .blocksPopup .textBlock .button.hide {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.blocksPopup .textBlock .button:hover .buttonHolder:before,
+.blocksPopup .textBlock .button:active .buttonHolder:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.blocksPopup .textBlock .button.showButton button {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+.blocksPopup .textBlock .button.showButton .buttonHolder:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  background: #cd2430;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .button {
     width: 170px;
   }
 }
-.blocksPopup .textBlock .button:hover .buttonHolder {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0.8;
-}
 .blocksPopup .textBlock .button .buttonHolder {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 100%;
   height: 100%;
-  background: #cd2430;
+  background: transparent;
+  will-change: transform;
   -webkit-transform: skew(-45deg);
   transform: skew(-45deg);
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.blocksPopup .textBlock .button .buttonHolder.showBG {
+  background: #cd2430;
+}
+.blocksPopup .textBlock .button .buttonHolder:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #3d4574;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .blocksPopup .textBlock .button button {
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1449,6 +1553,9 @@ body {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+}
+.blocksPopup .textBlock .button button.showText {
+  opacity: 1;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .button button {
@@ -1927,13 +2034,13 @@ body {
   }
 }
 .services .blocks .block:hover .button {
-  -webkit-transform: translateY(-50px);
-  transform: translateY(-50px);
+  -webkit-transform: translateY(-50px) rotate(180deg);
+  transform: translateY(-50px) rotate(180deg);
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px) {
   .services .blocks .block:hover .button {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px) rotate(180deg);
+    transform: translateY(-30px) rotate(180deg);
   }
 }
 .services .blocks .block.mobile {
@@ -2277,20 +2384,20 @@ body {
   margin: 0 auto;
   width: 26px;
   height: 21px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg) translateY(0);
+  transform: rotate(180deg) translateY(0);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   will-change: transform;
 }
 .services .blocks .block .button.hide {
-  -webkit-transform: translateY(-50px);
-  transform: translateY(-50px);
+  -webkit-transform: translateY(-50px) rotate(180deg);
+  transform: translateY(-50px) rotate(180deg);
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px) {
   .services .blocks .block .button.hide {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px) rotate(180deg);
+    transform: translateY(-30px) rotate(180deg);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1170px) {
@@ -2501,8 +2608,8 @@ body {
 .services [data-anim-serv="9"] {
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transition-delay: 3.5s;
-  transition-delay: 3.5s;
+  -webkit-transition-delay: 4s;
+  transition-delay: 4s;
 }
 .top {
   background-image: url("../assets/images/top.jpg");
@@ -2585,7 +2692,7 @@ body {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .top .menuContainer .menuHolder {
-    width: 235px;
+    width: 220px;
   }
 }
 .top .menuContainer .menu {
@@ -2697,15 +2804,6 @@ body {
 }
 .top .menuButton.hide {
   opacity: 0;
-}
-.top .menuButton:hover .border-menu div.line-top {
-  top: -1px;
-}
-.top .menuButton:hover .border-menu div.line-middle {
-  top: 6px;
-}
-.top .menuButton:hover .border-menu div.line-bottom {
-  top: 14px;
 }
 .top .menuButton .border-menu {
   width: 100%;

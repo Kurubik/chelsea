@@ -80,9 +80,9 @@
           +mq(0,767px)
             transform translateY(30px)
         .button
-          transform translateY(-50px)
+          transform translateY(-50px) rotate(180deg)
           +mq(768px,1170px)
-            transform translateY(-30px)
+            transform translateY(-30px) rotate(180deg)
       &.mobile
         display none
         +mq(481px,767px)
@@ -288,13 +288,13 @@
         margin 0 auto
         width 26px
         height 21px
-        transform rotate(180deg)
+        transform rotate(180deg) translateY(0)
         transition all 0.4s
         will-change transform
         &.hide
-          transform translateY(-50px)
+          transform translateY(-50px) rotate(180deg)
           +mq(768px,1170px)
-            transform translateY(-30px)
+            transform translateY(-30px) rotate(180deg)
         +mq(768px,1170px)
           width 21px
           height 17px
@@ -401,4 +401,4 @@
       transition-delay 3.5s
   [data-anim-serv="9"]          //triangles
     transition all 1s
-    transition-delay 3.5s
+    transition-delay 4s

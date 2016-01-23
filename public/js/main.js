@@ -22,12 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         var block = $(this).attr('data-close-block');
         poupAnimation('[data-block="'+ block + '"]', 'end');
+        console.log('anim close');
         setTimeout( function() {
             $('[data-block="'+ block + '"]').removeClass('open');
-            $('[data-popup]').removeClass('dark');
             $('[data-block]').removeClass('show');
+        }, 1500);
+        setTimeout(function() {
+            $('[data-popup]').removeClass('dark');
+        }, 2000);
+        setTimeout(function() {
             $('[data-popup]').removeClass('show');
-        }, 1000);
+        }, 2000);
     });
 
     $('[data-open-menu]').click(function(e) {
@@ -67,8 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $('[data-anchor-link]').click(function(e){
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $( $(this).attr('href') ).offset().top
+        var link = $(this).attr('href');
+        var delay = 0;
+        if ($('[data-main-menu="menu"]').hasClass('open')) {
+            $('[data-main-menu="menu"]').removeClass('open');
+            $('[data-menu]').removeClass('open');
+            delay = 550;
+        }
+
+        $('html, body').delay(delay).animate({
+            scrollTop: $(link).offset().top
         }, 500);
         return false;
     });
@@ -146,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         setTimeout( function() {
             $('[data-anim-serv="4"]').addClass('show');
-        }, 3000);
+        }, 2000);
         setTimeout( function() {
             $('[data-anim-serv]').each(function() {
                 $(this).removeAttr('data-anim-serv');
@@ -164,24 +177,43 @@ document.addEventListener('DOMContentLoaded', function() {
             $(popupBlock + ' [data-anim-popup="0"]').removeClass('hide');
             $(popupBlock + ' [data-anim-popup="1"]').removeClass('hide');
             $(popupBlock + ' [data-anim-popup="2"]').removeClass('hide');
-            $(popupBlock + ' [data-anim-popup="3"]').removeClass('hide');
-            $(popupBlock + ' [data-anim-popup="4"]').removeClass('hide');
+            setTimeout(function() {
+                $(popupBlock + ' [data-anim-popup="3"]').addClass('showButton');
+            }, 500);
+            $(popupBlock + ' [data-anim-popup="4"]').addClass('showText');
+            setTimeout(function() {
+                $(popupBlock + ' [data-anim-popup="5"]').addClass('showBG');
+                $(popupBlock + ' [data-anim-popup="3"]').removeClass('showButton');
+            }, 1000);
         }
         else {
             $(popupBlock + ' [data-anim-popup="0"]').addClass('hide');
             $(popupBlock + ' [data-anim-popup="1"]').addClass('hide');
             $(popupBlock + ' [data-anim-popup="2"]').addClass('hide');
-            $(popupBlock + ' [data-anim-popup="3"]').addClass('hide');
-            $(popupBlock + ' [data-anim-popup="4"]').addClass('hide');
+            $(popupBlock + ' [data-anim-popup="4"]').removeClass('showText');
+            setTimeout(function() {
+                $(popupBlock + ' [data-anim-popup="5"]').removeClass('showBG');
+            }, 1000);
         }
     }
 
     $(window).scroll(function() {
         lightMenu();
+        hideMenu();
     });
 
     function getsectionTop(block) {
         return $('[data-section="' + block + '"]').offset().top;
+    }
+
+    function hideMenu() {
+        if($(document).scrollTop() > ($('[data-section="0"]').offset().top-200)) {
+            $('[data-main-menu="menu"]').removeClass('hide');
+        }
+        else {
+            if (!$('[data-main-menu="menu"]').hasClass('open'))
+                $('[data-main-menu="menu"]').addClass('hide');
+        }
     }
 
     function lightMenu() {
@@ -189,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ($(window).scrollTop() + $(window).height() == $(document).height()) ? (bottom = true) : (bottom = false);
         if (!bottom) {
             var winTop = $(document).scrollTop();
-            winTop += 100;
+            winTop += 400;
             var blockNum = 5;
             for (var i=0; i<4; i++) {
                 var secTop1 = getsectionTop(i);

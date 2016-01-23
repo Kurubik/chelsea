@@ -12,6 +12,9 @@ html,
 body
   width  100%
   height auto
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  -moz-osx-font-smoothing grayscale
 
 .container
   width 100%
@@ -24,6 +27,7 @@ body
 .viewBlock
   position fixed
   top 70%
+  width 1px
   opacity 0
 
 .wrapper
@@ -86,17 +90,17 @@ body
       height 24px
       margin-bottom -21px
     .rect
-      width 23px
-      height 12px
-      border 2px solid #f6f3ef
-      opacity 0.7
-      border-radius 2px
+      width 24px
+      height 13px
+      border 1px solid #f6f3ef
+      opacity 1
+      border-radius 0
       margin-bottom 2px
       transition all 0.5s
       will-change margin
       +mq(0, 699px)
-        width 17px
-        height 9px
+        width 18px
+        height 10px
 
 .footer
   height 200px
@@ -165,6 +169,13 @@ body
       font-weight 400
       line-height 22px
       text-align left
+      a
+        color #242424
+        text-decoration none
+        transition color 0.3s
+        &:hover
+          color #cd2430
+          transition color 0.3s
       +mq(980px,1170px)
         font-size 14px
         line-height 20px
@@ -205,6 +216,16 @@ body
         right 0
         margin 0 auto
         text-align center
+      a
+        svg
+          path, polygon
+            transition fill 0.3s
+            fill #cd2430
+        &:hover
+          svg
+            path, polygon
+              fill #242424
+              transition fill 0.3s
       .icon
         vertical-align middle
         display inline-block
@@ -220,7 +241,9 @@ body
         svg
           width 100%
           height 100%
+          transition fill 0.3s
           path, polygon
+            transition fill 0.3s
             fill #cd2430
     .social
       display inline-block
@@ -258,8 +281,14 @@ body
             width 50px
             height 50px
             margin -15px 0 0 -15px
+          &:hover
+            svg
+              path, polygon
+                fill #cd2430
+                transition fill 0.3s
           svg
             width 100%
             height 100%
             path, polygon
               fill #242424
+              transition fill 0.3s
