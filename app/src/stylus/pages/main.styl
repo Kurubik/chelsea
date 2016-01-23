@@ -1,11 +1,38 @@
 *
   margin 0
   padding 0
+  -webkit-tap-highlight-color transparent
+  -moz-osx-font-smoothing grayscale
   &:focus
     outline none
 
 input:-webkit-autofill
   -webkit-box-shadow 0 0 0 1000px #f6f3ef inset
+
+*::-webkit-input-placeholder
+  color #f6f3ef
+  opacity 1
+
+*:-moz-placeholder
+  color #f6f3ef
+  opacity 1
+
+*::-moz-placeholder
+  color #f6f3ef
+  opacity 1
+
+*:-ms-input-placeholder
+  color #f6f3ef
+  opacity 1
+
+*:focus::-webkit-input-placeholder
+  color transparent
+*:focus:-moz-placeholder
+  color transparent
+*:focus::-moz-placeholder
+  color transparent
+*:focus:-ms-input-placeholder
+  color transparent
 
 
 html,
@@ -14,7 +41,14 @@ body
   height auto
   -ms-text-size-adjust 100%
   -webkit-text-size-adjust 100%
-  -moz-osx-font-smoothing grayscale
+
+body
+  &.popup
+    overflow hidden
+  &.noEvents
+    *
+      pointer-events none
+
 
 .container
   width 100%
@@ -96,7 +130,7 @@ body
       opacity 1
       border-radius 0
       margin-bottom 2px
-      transition all 0.5s
+      transition all 0.2s
       will-change margin
       +mq(0, 699px)
         width 18px
@@ -109,10 +143,7 @@ body
   vertical-align middle
   padding 75px 0
   width 100%
-  +mq(768px,979px)
-    height 180px
-    padding 50px 0 96px 0
-  +mq(700px,767px)
+  +mq(700px,1020px)
     height 180px
     padding 50px 0 96px 0
   +mq(0, 699px)
@@ -120,17 +151,8 @@ body
     padding 50px 45px 29px 45px
   .footerContainer
     width 100%
-    max-width 1120px
-    margin 0 auto
     position relative
-    +mq(980px,1170px)
-      max-width 950px
-    +mq(768px,979px)
-      max-width 670px
-    +mq(700px,767px)
-      max-width 670px
     +mq(0, 699px)
-      max-width 100%
       text-align center
     .address
       vertical-align middle
@@ -142,15 +164,9 @@ body
       line-height 22px
       text-align left
       width 260px
-      margin 0 5px 0 0
-      +mq(980px,1170px)
-        font-size 14px
-        line-height 20px
-      +mq(768px,979px)
-        width 235px
-        font-size 14px
-        line-height 20px
-      +mq(700px,767px)
+      margin 0 5px 0 81px
+      +mq(700px,1020px)
+        margin 0 5px 0 50px
         width 235px
         font-size 14px
         line-height 20px
@@ -201,16 +217,13 @@ body
       font-weight 400
       line-height 26px
       text-align right
-      +mq(768px,979px)
-        position absolute
+      position absolute
+      right 252px
+      top 7px
+      +mq(700px,1020px)
         top 75px
-        right 0
-      +mq(700px,767px)
-        position absolute
-        top 75px
-        right 0
+        right 50px
       +mq(0, 699px)
-        position absolute
         top 205px
         left 0
         right 0
@@ -247,48 +260,41 @@ body
             fill #cd2430
     .social
       display inline-block
-      margin 0 0 0 73px
-      +mq(980px,1170px)
-        margin 0 0 0 40px
-      +mq(768px,979px)
-        margin 0
-        position absolute
-        top 0
-        right 0
-      +mq(700px,767px)
-        margin 0
-        position absolute
-        top 0
-        right 0
+      position absolute
+      right 81px
+      top -3px
+      +mq(700px, 1020px)
+        right 50px
       +mq(0, 699px)
-        display block
-        margin 0
+        top 140px
+        left 0
+        right 0
+        margin 0 auto
+        text-align center
       .socialList
         vertical-align middle
         list-style none
         display inline-block
         li
           display inline-block
-          width 50px
-          height 50px
-          border 1px solid #747371
-          box-sizing border-box
-          padding 15px
           &:first-child
-            border-right none
-          a
-            position absolute
+            div
+              border-right none
+          a:hover
+            div
+              svg
+                path, polygon
+                  fill #cd2430
+                  transition fill 0.3s
+          div
             width 50px
             height 50px
-            margin -15px 0 0 -15px
-          &:hover
+            border 1px solid #747371
+            box-sizing border-box
+            padding 15px
             svg
+              width 100%
+              height 100%
               path, polygon
-                fill #cd2430
+                fill #242424
                 transition fill 0.3s
-          svg
-            width 100%
-            height 100%
-            path, polygon
-              fill #242424
-              transition fill 0.3s

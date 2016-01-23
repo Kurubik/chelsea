@@ -118,13 +118,9 @@
         font-weight 400
         text-align left
         padding 16px 19px
-        +mq(850px,1170px)
+        +mq(768px,1170px)
           font-size 16px
-        +mq(768px,849px)
-          font-size 16px
-        +mq(481px,767px)
-          font-size 13px
-        +mq(0, 480px)
+        +mq(0px,767px)
           font-size 13px
     .thanksMessage
       display none
@@ -133,6 +129,8 @@
       margin 0 auto
       width 600px
       margin-top 60px
+      +mq(0px,700px)
+        width 100%
       .message
         font-family BanderaPro
         color #f6f3ef
@@ -141,10 +139,10 @@
         line-height 36px
         text-align center
         padding-bottom 56px
-        +mq(481px,850px)
+        +mq(700px,850px)
           font-size 24px
           line-height 30px
-        +mq(0, 480px)
+        +mq(0, 700px)
           font-size 18px
           line-height 23px
     .button, .thanksMessage .button
@@ -153,18 +151,52 @@
       height 50px
       box-sizing border-box
       margin 20px auto 0 auto
+      opacity 1
+      transition opacity 0.3 ease
+      &.hide
+        opacity 0
       +mq(0, 480px)
         width 170px
-      &:hover
-        .buttonHolder
-          transition all 0.3s
-          opacity 0.8
+      &:hover, &:active
+        .buttonHolder:before
+          transform scaleX(1)
       .buttonHolder
-        transition all 0.3s
+        transition transform 0.3s
         width 100%
         height 100%
         background #cd2430
-        transform skew(-45deg)
+        will-change transform
+        transform skew(-45deg) scaleX(0)
+        display inline-block
+        vertical-align middle
+        box-shadow 0 0 1px rgba(0, 0, 0, 0)
+        -webkit-backface-visibility hidden
+        backface-visibility hidden
+        -moz-osx-font-smoothing grayscale
+        position relative
+        z-index 1
+        top 0
+        bottom 0
+        left 0
+        right 0
+        transform-origin 50%
+        transition-timing-function ease-out
+        &.showBG
+          transform skew(-45deg) scaleX(1)
+        &:before
+          content ""
+          position absolute
+          z-index -1
+          top 0
+          bottom 0
+          left 0
+          right 0
+          background #3d4574
+          transform scaleX(0)
+          transform-origin 50%
+          transition-property transform
+          transition-duration 0.3s
+          transition-timing-function ease-out
       button
         left 0
         position absolute
@@ -182,3 +214,4 @@
         text-align center
         +mq(0, 480px)
           font-size 14px
+

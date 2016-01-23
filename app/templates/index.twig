@@ -3,41 +3,41 @@
     <input type="hidden" id="version" value="desktop">
     {% include 'popups/popups.twig' %}
 <div data-view="block" class="viewBlock"></div>
-<div class="container">
-    <div class="wrapper">
-        <section data-main-menu="menu" class="menu hide">
-            <div class="aboutHeader" data-menu="0">
-                <div class="aboutLogo" data-sroll="top">
-                    {% include 'svg/sign_bw.twig' %}
+    <section data-main-menu="menu" class="menu hide">
+        <div class="aboutHeader">
+            <div class="aboutLogo" data-sroll="top">
+                {% include 'svg/sign_bw.twig' %}
+            </div>
+            <div class="aboutMenu" data-open-menu="0">
+                <div class="border-menu">
+                    <div class="line-top"></div>
+                    <div class="line-middle"></div>
+                    <div class="line-bottom"></div>
                 </div>
-                <div class="aboutMenu" data-open-menu="0">
-                    <div class="border-menu">
-                        <div class="line-top"></div>
-                        <div class="line-middle"></div>
-                        <div class="line-bottom"></div>
-                    </div>
-                </div>
+            </div>
+            <div class="menuContainer">
                 <div class="aboutLogoOpen" data-sroll="top" data-menu="close">
                     {% include 'svg/sign_color.twig' %}
                 </div>
-                <div class="menuContainer">
-                    <ul data-remove-menu="0" data-menu="0" class="headerMenu">
-                        <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
-                        <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
-                        <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
-                        <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
-                        <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
-                    </ul>
-                </div>
+                <ul data-remove-menu="0" data-menu="0" class="headerMenu">
+                    <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
+                    <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
+                    <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
+                    <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
+                    <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </section>
+<div class="container">
+    <div class="wrapper">
         <section data-section="5" id="top" class="top">
             <div class="centerContainer">
                 <div data-anim-top="5" class="fullLogo hide">
                     {% include 'svg/logo_full.twig' %}
                 </div>
                 <div data-anim-top="0" class="menuContainer hide">
-                    <ul data-anim-top="2" class="menu hide">
+                    <ul data-anim-top="2" class="menuTop hide">
                         <li><a data-red="0" data-anchor-link="0" href="#company">Company</a></li>
                         <li><a data-red="1" data-anchor-link="1" href="#chelsea">Chelsea</a></li>
                         <li><a data-red="2" data-anchor-link="2" href="#services">Services</a></li>
@@ -245,7 +245,7 @@
                     <span class="titleRed">Make</span><br>
                     <span class="titleWhite">request</span>
                 </div>
-                <div class="formHolder">
+                <div data-start-anim="form" class="formHolder">
                     <form data-url="/{{ app.request.locale }}/api/send-mail/" id="reqForm" class="requestForm" data-send="success">
                         <input data-request-type="all" type="hidden" name="optional" value="">
                         <div class="inputField">
@@ -264,8 +264,8 @@
                             <textarea name="comment" placeholder="Explain the essence of your request"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">send request</button>
-                            <div class="buttonHolder"></div>
+                            <button data-anim-form="1" class="hide" type="submit">send request</button>
+                            <div data-anim-form="0" class="buttonHolder"></div>
                         </div>
                     </form>
                     <div class="thanksMessage" data-send="thanks">
@@ -275,8 +275,8 @@
                             contact you soon.<br>
                         </div>
                         <div class="button">
-                            <button data-return="form" type="button">send another</button>
-                            <div class="buttonHolder"></div>
+                            <button data-anim-thanks="1" data-return="form" class="hide" type="button">send another</button>
+                            <div data-anim-thanks="0" class="buttonHolder"></div>
                         </div>
                     </div>
                 </div>

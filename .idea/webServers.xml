@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ef200254-e8f7-4558-9cd2-5890d92c9f13" name="inv1s" url="http://188.226.230.208">
+        <fileTransfer host="188.226.230.208" port="22" accessType="SFTP" password="dfeddfc2dfc8dfcedfdedfc4" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
