@@ -29,9 +29,10 @@
     &.hide
       opacity 0
     +mq(1366px)
-      left 1240px
+      left 1220px
       margin 0 auto
       width 120px
+      right 60px
     +mq(768px,979px)
       right 30px
     +mq(0, 767px)
@@ -73,6 +74,8 @@
       svg
         .color
           fill #3d4574
+          &.anim2
+            transition-delay 0.4s
     +mq(0, 480px)
       padding 50px 0 0 0
       width 167px
@@ -82,6 +85,8 @@
       height 100%
       .color
         will-change fill
+        &.anim2
+          transition-delay 0.4s
   .menuContainer
     position relative
     margin 265px 0 0 0
