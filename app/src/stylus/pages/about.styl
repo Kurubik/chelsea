@@ -4,7 +4,12 @@
   background-size cover
   background-repeat no-repeat
   background-position center
+  +mq(720px, 800px)
+    background-position 65% 85%
+    background-size 180%
   +mq(0, 480px)
+    background-size 160%
+    background-position 70% 0
     height 590px
   .titleText
     position relative
@@ -22,16 +27,12 @@
     +mq(850px,1170px)
       font-size 130px
       line-height 85px
-    +mq(768px,849px)
-      margin 0 0 -2px 45px
-      font-size 110px
-      line-height 75px
-    +mq(481px,767px)
+    +mq(481px,849px)
       margin 0 0 -2px 45px
       font-size 110px
       line-height 75px
     +mq(0, 480px)
-      margin 0 0 -2px 29px
+      margin 0 0 -1px 29px
       padding-top 243px
       font-size 55px
       line-height 35px
@@ -49,6 +50,8 @@
     will-change transform
     &.hide
       transform translateX(2000px)
+      +mq(0, 480px)
+        transform translateX(0)
     .aboutText
       position absolute
       font-family BanderaPro
@@ -60,7 +63,7 @@
       width 900px
       height 210px
       box-sizing border-box
-      padding-top 57px
+      padding 57px 20px 0 10px
       z-index 9
       left 0
       right 0
@@ -74,16 +77,12 @@
         width 100%
         font-size 15px
         line-height 23px
-      +mq(768px,849px)
+        padding 57px 120px 0 90px
+      +mq(481px,849px)
         width 100%
         font-size 14px
         line-height 22px
-        padding 57px 30px 0 30px
-      +mq(481px,767px)
-        width 100%
-        font-size 14px
-        line-height 22px
-        padding 35px 30px 0 30px
+        padding 57px 80px 0 90px
       +mq(0, 480px)
         width 100%
         padding 46px 54px
@@ -100,10 +99,7 @@
       +mq(850px,1170px)
         width 878px
         margin 0 0 0 15%
-      +mq(768px,849px)
-        width 708px
-        margin 0 0 0 14%
-      +mq(481px,767px)
+      +mq(481px,849px)
         width 708px
         margin 0 0 0 14%
       +mq(0, 480px)

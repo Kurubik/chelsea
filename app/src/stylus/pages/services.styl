@@ -119,10 +119,10 @@
           background-color #3d4574
 
       &.mobile-blue
-        +mq(481px,767px)
-          background-color #3d4574
-        +mq(0, 480px)
-          background-color #3d4574
+        +mq(0px,767px)
+          background-color #747371
+          &.show
+            background-color #3d4574
       &.red
         background-color #747371
         &.show
@@ -391,5 +391,10 @@
       transition all 1s ease
       transition-delay 3.5s
   [data-anim-serv="9"]          //triangles
+    transition all 1s ease
+    transition-delay 4s
+    +mq(0,480px)
+      transition-delay 1s
+  [data-anim-serv="10"]          //triangles
     transition all 1s ease
     transition-delay 4s

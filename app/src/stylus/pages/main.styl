@@ -3,6 +3,7 @@
   padding 0
   -webkit-tap-highlight-color transparent
   -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
   &:focus
     outline none
 
@@ -45,6 +46,13 @@ body
 body
   &.popup
     overflow hidden
+    +mq(0, 480px)
+      .menu
+        .aboutHeader
+          .aboutMenu
+            transition-delay 1s
+            transition opacity 0.3s ease
+            opacity 0
   &.noEvents
     *
       pointer-events none
@@ -57,12 +65,21 @@ body
   background-attachment fixed
   overflow hidden
   min-width 320px
+  will-change transform
+  transition 0.3s ease
+  &.langMenuOpen
+    transform translateY(40px)
+    +mq(0, 767px)
+      transition 0.3s ease
+      transform translateY(40px)
 
 .viewBlock
   position fixed
   top 70%
   width 1px
   opacity 0
+  +mq(0, 790px)
+    top 98%
 
 .wrapper
   max-width 1366px
@@ -276,6 +293,16 @@ body
         list-style none
         display inline-block
         li
+          &.twitter
+            svg
+              width 20px
+              height 16px
+              margin 3px 0 0 0
+          &.fb
+            svg
+              width 10px
+              height 19px
+              margin 0 0 0 3px
           display inline-block
           &:first-child
             div

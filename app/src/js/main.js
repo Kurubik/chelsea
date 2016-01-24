@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout( function() {
             $('[data-popup]').addClass('dark');
             //$('[data-block="'+ block + '"]').addClass('show').css('top',(docTop + 'px'));
-            $('[data-block="'+ block + '"]').addClass('show').css('top',(0 + 'px'));
+            $('[data-block="'+ block + '"]').addClass('show');
         }, 10);
         setTimeout( function() {
             $('[data-block="'+ block + '"]').addClass('open');
@@ -57,7 +57,26 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout( function() {
                 $('[data-popup]').removeClass('show');
             }, 500);
+            if($('[data-lang="langs"]').hasClass('show')){
+                $('[data-lang="langs"]').removeClass('show');
+                $('[data-main-menu="menu"]').removeClass('langMenu');
+                $('[data-lang-top="menu"]').removeClass('langMenuOpen');
+            }
         }
+    });
+
+    $('[data-lang="menu"]').click(function() {
+        if($('[data-lang="langs"]').hasClass('show')){
+            $('[data-lang="langs"]').removeClass('show');
+            $('[data-main-menu="menu"]').removeClass('langMenu');
+            $('[data-lang-top="menu"]').removeClass('langMenuOpen');
+        }
+        else {
+            $('[data-lang="langs"]').addClass('show');
+            $('[data-main-menu="menu"]').addClass('langMenu');
+            $('[data-lang-top="menu"]').addClass('langMenuOpen');
+        }
+
     });
 
 
@@ -88,21 +107,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $('[data-sroll="top"]').click(function(e) {
         e.preventDefault();
+        $('body').addClass('noEvents');
         var body = $("html, body");
         body.stop().animate({scrollTop:0}, '700', 'swing');
+        setTimeout(function() {
+            $('body').removeClass('noEvents');
+        }, 700);
     });
 
     $('[data-menu="close"]').click(function(e) {
         e.preventDefault();
         $('[data-main-menu="menu"]').removeClass('open');
-        $('[data-menu]').removeClass('open');
+        if($('[data-lang="langs"]').hasClass('show')){
+            $('[data-lang="langs"]').removeClass('show');
+            $('[data-main-menu="menu"]').removeClass('langMenu');
+            $('[data-lang-top="menu"]').removeClass('langMenuOpen');
+        }
+        setTimeout( function() {
+            $('[data-popup]').removeClass('dark');
+        }, 200);
+        setTimeout( function() {
+            $('[data-popup]').removeClass('show');
+        }, 500);
     });
 
     $('[data-anchor-link]').click(function(e){
         e.preventDefault();
+        $('body').addClass('noEvents');
         var link = $(this).attr('href');
         var delay = 0;
         if ($('[data-main-menu="menu"]').hasClass('open')) {
+            if($('[data-lang="langs"]').hasClass('show')){
+                $('[data-lang="langs"]').removeClass('show');
+                $('[data-main-menu="menu"]').removeClass('langMenu');
+                $('[data-lang-top="menu"]').removeClass('langMenuOpen');
+            }
             $('[data-main-menu="menu"]').removeClass('open');
             setTimeout( function() {
                 $('[data-popup]').removeClass('dark');
@@ -114,11 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
         $('html, body').delay(delay).animate({
             scrollTop: $(link).offset().top
         }, 700 , 'swing');
-        return false;
+        setTimeout(function() {
+            $('body').removeClass('noEvents');
+        }, 700);
     });
 
     $('[data-request]').click(function(e) {
         e.preventDefault();
+        $('body').addClass('noEvents');
         var block = $(this).attr('data-request');
         poupAnimation('[data-block="'+ block + '"]', 'end');
         setTimeout( function() {
@@ -136,6 +178,9 @@ document.addEventListener('DOMContentLoaded', function() {
         $('html, body').animate({
             scrollTop: $('#request').offset().top
         }, 700, 'swing');
+        setTimeout(function() {
+            $('body').removeClass('noEvents');
+        }, 700);
     });
 
     var animationAbout = $('[data-start-anim="about"]').offset();
@@ -202,9 +247,18 @@ document.addEventListener('DOMContentLoaded', function() {
         for(var i = 0; i < 14; i++) {
                 removeHideClass(i);
         }
-        setTimeout( function() {
-            $('[data-anim-serv="4"]').addClass('show');
-        }, 2000);
+        if (Modernizr.mq('(max-width: 480px)')) {
+            setTimeout( function() {
+                $('[data-anim-serv="4"]').addClass('show');
+                $('[data-anim-serv="5"]').addClass('show');
+            }, 1000);
+        }
+        else {
+            setTimeout( function() {
+                $('[data-anim-serv="4"]').addClass('show');
+                $('[data-anim-serv="5"]').addClass('show');
+            }, 2000);
+        }
         setTimeout( function() {
             $('[data-anim-serv]').each(function() {
                 $(this).removeAttr('data-anim-serv');
@@ -277,10 +331,18 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#reqForm').submit(function(e) {
         e.preventDefault();
         var valid = true;
-        if(!Validation.email($(this).find('[name="email"]'))){
-            valid = false;
-            $(this).find('[name="email"]').css('border', '1px solid #cd2430');
-        }
+        $('[data-validate="1"]').each(function() {
+            if ($(this).val() == '') {
+                valid = false;
+                $(this).addClass('error');
+            }
+            if ($(this).attr('name') == 'email') {
+                if(!Validation.email($(this))){
+                    valid = false;
+                    $(this).addClass('error');
+                }
+            }
+        });
         if (valid) {
             var url = $(this).attr('data-url');
             $.ajax({
@@ -311,8 +373,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-    $('#reqForm input').focus(function() {
-        $(this).css('border', '');
+    $('#reqForm [data-validate]').focus(function() {
+        $(this).removeClass('error');
     });
 
     $('[data-return="form"]').click(function(e) {

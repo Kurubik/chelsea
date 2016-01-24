@@ -20,29 +20,50 @@
       transition transform 0.5s ease
       transform translateY(-240px) translateX(0)
   &:not(.hide)
+    &.langMenu
+      .aboutLogo
+        transform translateY(130px) translateX(0)
+      .aboutMenu
+        transform translateY(130px) translateX(0)
+        +mq(0, 767px)
+          transform translateY(255px) translateX(30px)
     .aboutLogo
+      transition-delay 0.4s
       transition transform 0.5s ease
       transform translateY(100px) translateX(0)
     .aboutMenu
+      transition-delay 0.4s
       transition transform 0.5s ease
       transform translateY(100px) translateX(0)
+      +mq(0, 767px)
+        transform translateY(215px) translateX(30px)
   &.open
-    overflow hidden
     transform translateY(0) translateX(-50%)
     transition transform 0.5s ease
     transition-delay 0.2s
+    &.langMenu
+      .aboutHeader
+        .aboutMenu
+          +mq(0, 767px)
+            transform translateY(255px) translateX(30px)
     .aboutHeader
       .aboutLogo
-        transform translateX(-150px) translateY(100px)
+        transform translateX(-1500px) translateY(100px)
         transition transform 0.3s ease
       .aboutMenu
-        transform translateX(150px) translateY(100px)
+        transform translateX(1500px) translateY(100px)
         transition transform  0.3s ease
+        +mq(0, 767px)
+          transform translateY(215px) translateX(30px)
       .aboutLogoOpen
         opacity 1
         transition opacity 0.5s ease
         transition-delay 0.5s
-  .aboutHeader
+      .lang
+        opacity 1
+        transition opacity 0.5s ease
+        transition-delay 0.5s
+.aboutHeader
     height 100%
     .aboutLogoOpen
       transition-delay 0.2s
@@ -59,9 +80,9 @@
       transition opacity 0.5s ease
       will-change opacity
       +mq(768px,979px)
-        margin-left 40px
+        left 40px
       +mq(0, 767px)
-        margin-left 30px
+        left 30px
       svg
         width 100%
         height 100%
@@ -75,7 +96,7 @@
       width 50px
       height 30px
       transition transform 0.5s ease
-      transition-delay 0.4s
+      transition-delay 0.5s
       position absolute
       top 40px
       left 50px
@@ -93,8 +114,8 @@
       display block
       width 26px
       height 20px
-      transition transform 0.5s ease
-      transition-delay 0.4s
+      transition transform 0.5s ease, opacity 0.5s ease
+      transition-delay 0.5s
       position absolute
       top 40px
       right 50px
@@ -129,14 +150,116 @@
       svg
         width 100%
         height 100%
-        transition all 0.3s
+        transition fill 0.3s
         path
           fill #f6f3ef
-          transition all 0.3s
+          transition fill 0.3s
+    .languages
+      position relative
+      display block
+      height 50px
+      transition transform  0.3s ease
+      transform translateY(-50px)
+      &.show
+        transition transform  0.3s ease
+        transform translateY(0px)
+      ul
+        position absolute
+        list-style none
+        z-index 2
+        width 100%
+        overflow hidden
+        text-align center
+        height 100%
+        left 0
+        right 0
+        box-sizing border-box
+        vertical-align middle
+        margin 0 auto
+        padding 10px 0
+        background #cd2430
+        +mq(768px,979px)
+          width 100%
+        +mq(0, 767px)
+          width 100%
+        li
+          display inline-block
+          padding-left 60px
+          +mq(768px,979px)
+            padding-left 50px
+          +mq(0, 767px)
+            display inline-block
+            padding-left 45px
+          &:first-child
+            padding-left 0
+          a
+            font-family BanderaPro
+            color #f6f3ef
+            font-size 16px
+            font-weight 400
+            line-height 30px
+            text-align center
+            transition all 0.3s
+            text-decoration none
+            will-change color
+            +mq(768px,979px)
+              font-size 14px
+            +mq(0, 767px)
+              font-size 14px
+            &.light
+              color #242424
+              transition all 0.3s
+            &:hover
+              color #242424
+              transition all 0.3s
     .menuContainer
       position relative
       display block
       height 100%
+      .lang
+        transition-delay 0.2s
+        cursor pointer
+        display inline-block
+        opacity 0
+        position absolute
+        z-index 22
+        top 40px
+        right 40px
+        vertical-align middle
+        transition opacity 0.5s ease
+        will-change opacity
+        +mq(768px,979px)
+          right 30px
+        +mq(0, 767px)
+          top 100px
+          left 20px
+        &:hover
+          span
+            color #cd2430
+            transition color 0.3s ease
+        span
+          display inline-block
+          vertical-align top
+          margin-top 4px
+          color #242424
+          font-family BanderaPro
+          font-size 14px
+          font-weight 400
+          transition color 0.3s ease
+          +mq(0px, 800px)
+            display none
+        .globe
+          display inline-block
+          width 50px
+          height 30px
+          +mq(0px, 480px)
+            height 22px
+            margin 88px -3px 0 0
+          svg
+            width 100%
+            height 100%
+            path
+              fill #cd2430
       .headerMenu
         position absolute
         list-style none

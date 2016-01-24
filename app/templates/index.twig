@@ -26,13 +26,31 @@
                     <li><a data-red="3" data-anchor-link="3" href="#request">Request</a></li>
                     <li><a data-red="4" data-anchor-link="4" href="#contacts">Contacts</a></li>
                 </ul>
+                <div class="lang" data-lang="menu">
+                    <span>language</span>
+                    <div class="globe">
+                        {% include 'svg/lang.twig' %}
+                    </div>
+                </div>
+            </div>
+            <div class="languages" data-lang="langs">
+                <ul>
+                    <li><a href="#">in english</a></li>
+                    <li><a href="#">по-русски</a></li>
+                </ul>
             </div>
         </div>
     </section>
-<div class="container">
+<div class="container" data-lang-top="menu">
     <div class="wrapper">
         <section data-section="5" id="top" class="top">
             <div class="centerContainer">
+                <div data-anim-top="0" class="langTop hide" data-lang="menu">
+                    <span>language</span>
+                    <div class="globeTop">
+                        {% include 'svg/lang.twig' %}
+                    </div>
+                </div>
                 <div data-anim-top="5" class="fullLogo hide">
                     {% include 'svg/logo_full.twig' %}
                 </div>
@@ -55,8 +73,8 @@
                 </div>
                 <div data-anim-top="1" class="textContainer hide">
                     <div data-anim-top="3" class="topText hide">
-                        Chelsea Partners Consulting Ltd is a specialist provider of<br>
-                        consulting services for companies looking to register a legal entity and outsource parts of<br>
+                        Chelsea Partners Consulting Ltd is a specialist provider of
+                        consulting services for companies looking to register a legal entity and outsource parts of
                         their business operations into the UK and Continental Europe.
                     </div>
                     <div class="textHolder"></div>
@@ -79,9 +97,9 @@
                 </div>
                 <div data-anim-about="2" class="textContainer hide">
                     <div data-anim-about="3" data-start-anim="about" class="aboutText hide">
-                        CPC offers a full range of professional services for companies looking to expand and outsource parts of their business<br>
-                        operation into the UK and Continental Europe. Our services range from a simple Company<br>
-                        Registration and Accounting / Legal Support to a more sophisticated Market Research and Sales Growth<br>
+                        CPC offers a full range of professional services for companies looking to expand and outsource parts of their business
+                        operation into the UK and Continental Europe. Our services range from a simple Company
+                        Registration and Accounting / Legal Support to a more sophisticated Market Research and Sales Growth
                         strategy development aimed at gaining access to the UK / EU market.
                     </div>
                     <div class="textHolder"></div>
@@ -104,9 +122,9 @@
                 </div>
                 <div data-anim-chel="2" class="textContainer hide">
                     <div data-anim-chel="3" data-start-anim="chelsea" class="chelseaText hide">
-                        Based in Chelsea, London, CPC team is a group of professionals with a background in London’s Tier 1 Investment Banks,<br>
-                        Private Banks, Law Firms and Property Consulting firms with over 30 years of accumulated<br>
-                        experience in exposure to UK’s professional services sector. Our aim is to ensure that your business operation<br>
+                        Based in Chelsea, London, CPC team is a group of professionals with a background in London’s Tier 1 Investment Banks,
+                        Private Banks, Law Firms and Property Consulting firms with over 30 years of accumulated
+                        experience in exposure to UK’s professional services sector. Our aim is to ensure that your business operation
                         transfer to the UK runs as smooth and simple as possible.
                     </div>
                     <div class="textHolder"></div>
@@ -231,7 +249,7 @@
                         </div>
                     </div>
                     <div data-anim-serv="6" class="block mobile hide">
-                        <div data-anim-serv="9" class="topTriangle red hide"></div>
+                        <div data-anim-serv="10" class="topTriangle red hide"></div>
                         <div class="icon"></div>
                         <div class="text"></div>
                         <div class="button"></div>
@@ -249,19 +267,19 @@
                     <form data-url="/{{ app.request.locale }}/api/send-mail/" id="reqForm" class="requestForm" data-send="success">
                         <input data-request-type="all" type="hidden" name="optional" value="">
                         <div class="inputField">
-                            <input type="text" name="name" placeholder="Your name, Company">
+                            <input type="text" name="name" placeholder="Your name, Company" data-validate="1">
                         </div>
                         <div class="inputField">
-                            <input type="tel" name="phone" placeholder="Contact phone">
+                            <input type="tel" name="phone" placeholder="Contact phone" data-validate="0">
                         </div>
                         <div class="inputField">
-                            <input type="text" name="city" placeholder="Country, City">
+                            <input type="text" name="city" placeholder="Country, City" data-validate="0">
                         </div>
                         <div class="inputField">
-                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="email" name="email" placeholder="E-mail" data-validate="1">
                         </div>
                         <div class="textField">
-                            <textarea name="comment" placeholder="Explain the essence of your request"></textarea>
+                            <textarea name="comment" placeholder="Explain the essence of your request" data-validate="1"></textarea>
                         </div>
                         <div class="button">
                             <button data-anim-form="1" class="hide" type="submit">send request</button>
