@@ -1046,6 +1046,9 @@ body.noEvents * {
     transform: translateY(-240px) translateX(-50%);
   }
 }
+.menu.overflow {
+  overflow: hidden;
+}
 .menu.hide .aboutLogo {
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -1109,16 +1112,16 @@ body.noEvents * {
   }
 }
 .menu.open .aboutHeader .aboutLogo {
-  -webkit-transform: translateX(-1500px) translateY(100px);
-  transform: translateX(-1500px) translateY(100px);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+  -webkit-transform: translateX(-1000px) translateY(100px);
+  transform: translateX(-1000px) translateY(100px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 .menu.open .aboutHeader .aboutMenu {
-  -webkit-transform: translateX(1500px) translateY(100px);
-  transform: translateX(1500px) translateY(100px);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
+  -webkit-transform: translateX(1000px) translateY(100px);
+  transform: translateX(1000px) translateY(100px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 @media only screen and (min-width: 0) and (max-width: 767px) {
   .menu.open .aboutHeader .aboutMenu {

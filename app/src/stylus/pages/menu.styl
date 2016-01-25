@@ -12,6 +12,8 @@
   +mq(0, 767px)
     height 240px
     transform translateY(-240px) translateX(-50%)
+  &.overflow
+    overflow hidden
   &.hide
     .aboutLogo
       transition transform 0.5s ease
@@ -48,11 +50,11 @@
             transform translateY(255px) translateX(30px)
     .aboutHeader
       .aboutLogo
-        transform translateX(-1500px) translateY(100px)
-        transition transform 0.3s ease
+        transform translateX(-1000px) translateY(100px)
+        transition transform 0.5s ease
       .aboutMenu
-        transform translateX(1500px) translateY(100px)
-        transition transform  0.3s ease
+        transform translateX(1000px) translateY(100px)
+        transition transform  0.5s ease
         +mq(0, 767px)
           transform translateY(215px) translateX(30px)
       .aboutLogoOpen
