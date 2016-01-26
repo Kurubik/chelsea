@@ -18,7 +18,7 @@
     position absolute
     z-index 22
     top 40px
-    right 40px
+    right 30px
     vertical-align middle
     transition opacity 0.5s ease
     will-change opacity
@@ -29,19 +29,25 @@
     &.hide
       opacity 0
     +mq(1366px)
-      left 1220px
+      left 1230px
       margin 0 auto
       width 120px
-      right 60px
+      right 40px
     +mq(768px,979px)
       right 30px
     +mq(0, 767px)
       top 20px
       right 5px
-    &:hover
+    &.tap
+      span
+        color #cd2430 !important
+        transition color 0.3s ease
+    &:hover, &:active
       span
         color #cd2430
         transition color 0.3s ease
+        +mq(0, 769px)
+          color #242424
     span
       display inline-block
       vertical-align top
@@ -51,12 +57,15 @@
       font-size 14px
       font-weight 400
       transition color 0.3s ease
+      +mq(481, 800px)
+        font-size 13px
       +mq(0, 480px)
         display none
     .globeTop
       display inline-block
       width 50px
-      height 30px
+      height 27px
+      margin-top -2px
       +mq(0, 480px)
         height 22px
       svg
@@ -95,6 +104,8 @@
     will-change transform
     &.hide
       transform rotateX(90deg)
+    +mq(481px, 800px)
+      margin 310px 0 0 0
     +mq(0, 480px)
       margin 160px 0 0 0
     .menuHolder
@@ -106,6 +117,7 @@
       border-right 50px solid transparent
       width 1100px
       margin 0 auto
+      margin-bottom -1px
       +mq(850px,1170px)
         width 700px
       +mq(768px,849px)
@@ -130,7 +142,7 @@
       +mq(850px,1170px)
         width 575px
       +mq(768px,849px)
-        width 485px
+        width 450px
       +mq(481px,767px)
         width 450px
       +mq(0, 480px)
@@ -141,7 +153,7 @@
         +mq(850px,1170px)
           padding-left 60px
         +mq(768px,849px)
-          padding-left 50px
+          padding-left 40px
         +mq(481px,767px)
           padding-left 40px
         &:first-child

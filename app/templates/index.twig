@@ -45,7 +45,7 @@
     <div class="wrapper" data-lang-top="menu">
         <section data-section="5" id="top" class="top">
             <div class="centerContainer">
-                <div data-anim-top="0" class="langTop hide" data-lang="menu" data-top-menu="lang">
+                <div data-anim-top="0" class="langTop hide" data-lang="menu" data-tap="lang" data-top-menu="lang">
                     <span>language</span>
                     <div class="globeTop">
                         {% include 'svg/lang.twig' %}
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </section>
-        <section data-section="2" id="services" class="services">
+        <section data-start-anim="services" data-section="2" id="services" class="services">
             <div class="centerContainer">
                 <div class="servicesHeader">
                     <div class="titleText">
@@ -147,7 +147,7 @@
                         <span class="titleWhite">services</span>
                     </div>
                 </div>
-                <div data-start-anim="services" class="blocks">
+                <div class="blocks">
                     <div data-anim-serv="0" class="block hide closed" data-show-block="1">
                         <div data-anim-serv="9" class="bottomTriangle hide blue mobile-red"></div>
                         <div class="icon hide" data-anim-serv="11">
@@ -281,7 +281,7 @@
                         <div class="textField">
                             <textarea name="comment" placeholder="Explain the essence of your request" data-validate="1"></textarea>
                         </div>
-                        <div class="button">
+                        <div class="button" data-tap="button">
                             <button data-anim-form="1" class="hide" type="submit">send request</button>
                             <div data-anim-form="0" class="buttonHolder"></div>
                         </div>
@@ -292,7 +292,7 @@
                             sent successfully. Our representative will<br>
                             contact you soon.<br>
                         </div>
-                        <div class="button">
+                        <div class="button" data-tap="button">
                             <button data-anim-thanks="1" data-return="form" class="hide" type="button">send another</button>
                             <div data-anim-thanks="0" class="buttonHolder"></div>
                         </div>

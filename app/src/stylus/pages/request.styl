@@ -161,9 +161,14 @@
         opacity 0
       +mq(0, 480px)
         width 170px
-      &:hover, &:active
+      &.tap
+        .buttonHolder:before
+          transform scaleX(1) !important
+      &:active, &:hover
         .buttonHolder:before
           transform scaleX(1)
+          +mq(0, 770px)
+            transform scaleX(0)
       .buttonHolder
         transition transform 0.3s
         width 100%
