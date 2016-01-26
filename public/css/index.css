@@ -994,10 +994,16 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 .footer .footerContainer .social .socialList li {
   display: inline-block;
 }
+.footer .footerContainer .social .socialList li.twitter div {
+  border-radius: 3px 0 0 3px;
+}
 .footer .footerContainer .social .socialList li.twitter svg {
   width: 20px;
   height: 16px;
   margin: 3px 0 0 0;
+}
+.footer .footerContainer .social .socialList li.fb div {
+  border-radius: 0 3px 3px 0;
 }
 .footer .footerContainer .social .socialList li.fb svg {
   width: 10px;
@@ -1726,7 +1732,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .CPCblock {
-    height: 320px;
+    height: auto;
     max-height: 100%;
     overflow-y: auto;
     padding: 49px 53px;
