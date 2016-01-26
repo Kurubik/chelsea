@@ -994,10 +994,16 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 .footer .footerContainer .social .socialList li {
   display: inline-block;
 }
+.footer .footerContainer .social .socialList li.twitter div {
+  border-radius: 3px 0 0 3px;
+}
 .footer .footerContainer .social .socialList li.twitter svg {
   width: 20px;
   height: 16px;
   margin: 3px 0 0 0;
+}
+.footer .footerContainer .social .socialList li.fb div {
+  border-radius: 0 3px 3px 0;
 }
 .footer .footerContainer .social .socialList li.fb svg {
   width: 10px;
@@ -1640,14 +1646,16 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   }
 }
 .blocksPopup .closePopup {
+  position: absolute;
   cursor: pointer;
   width: 26px;
   height: 25px;
-  margin: 12% 40px 40px auto;
   opacity: 1;
   will-change: opacity, margin, transform;
   -webkit-transition: -webkit-transform 0.4s 0s ease;
   transition: transform 0.4s 0s ease;
+  margin: -70px 40px 0 0;
+  right: 0;
 }
 .blocksPopup .closePopup:hover {
   -webkit-transition: -webkit-transform 0.4s 0s ease;
@@ -1657,30 +1665,21 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 .blocksPopup .closePopup.hide {
   opacity: 0;
-  margin: 12% -200px 40px auto;
-}
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-  .blocksPopup .closePopup.hide {
-    margin: 20% -200px 40px auto;
-  }
+  margin: -70px -40px 0 0;
+  top: 15%;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .closePopup.hide {
     width: 21px;
     height: 21px;
-    margin: 20px 20px 20px auto;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-  .blocksPopup .closePopup {
-    margin: 20% 40px 40px auto;
+    margin: -40px 20px 0 0;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .closePopup {
     width: 21px;
     height: 21px;
-    margin: 20px 20px 20px auto;
+    margin: -40px 20px 0 0;
   }
 }
 .blocksPopup .closePopup svg {
@@ -1695,17 +1694,23 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   background: #f6f3ef;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 70px;
+  padding: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock {
+    top: 60px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     height: auto;
-    max-height: 65%;
-    overflow-y: auto;
-    padding: 49px 0;
+    max-height: 80%;
+    padding: 0;
   }
 }
 .blocksPopup .textBlock .CPCblock {
+  background: #f6f3ef;
   padding: 70px;
   background-image: url("../assets/images/cpc_bg.svg");
   background-repeat: no-repeat;
@@ -1727,7 +1732,10 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .CPCblock {
-    padding: 0 53px;
+    height: auto;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 49px 53px;
     background-size: 170%;
   }
 }
