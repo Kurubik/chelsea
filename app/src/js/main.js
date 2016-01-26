@@ -3,11 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     topAnimation();
-//    ('.CPCblock').css('height', ($(window).height()-140) + "px" );
 
-    //if (($(window).height() - 60) < ) {
-    //  $('.CPCblock').css('height', ($(window).height()-140) + "px" );
-    //}
 
     $('[data-tap]').on('tap',function (){
         $(this).addClass('tap');
@@ -32,14 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
             $('[data-block="'+ block + '"]').addClass('open');
             poupAnimation('[data-block="'+ block + '"]', 'start');
         }, 500);
-        $('.CPCblock').each(function() {
-            var blockHeight = $('.CPCblock .text').height() + $('.CPCblock .title').height() + $('.CPCblock .button').height() + $('.CPCblock .text').outerHeight() + $('.CPCblock .title').outerHeight() + $('.CPCblock .button').outerHeight();
-            console.log(blockHeight);
-            console.log($(window).height() - 60);
+
+            var blockHeight = $('[data-block="'+ block + '"]').find('.text').height() + $('[data-block="'+ block + '"]').find('.title').height() + $('[data-block="'+ block + '"]').find('.button').height() + $('[data-block="'+ block + '"]').find('.text').outerHeight() + $('[data-block="'+ block + '"]').find('.title').outerHeight() + $('[data-block="'+ block + '"]').find('.button').outerHeight();
             if (($(window).height() - 100) < blockHeight) {
-                $('.CPCblock').css('height', ($(window).height()-140) + "px" );
+                $('[data-block="'+ block + '"] .CPCblock').css('height', ($(window).height()-140) + "px" );
             }
-        });
+
         $('body').addClass('popup');
     });
 
