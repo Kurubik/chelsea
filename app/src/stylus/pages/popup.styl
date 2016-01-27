@@ -43,13 +43,13 @@
     +mq(0, 480px)
       overflow-y hidden
       top 0
-      transform scaleY(1) translateY(2000px)
+      transform scaleY(1) translateY(100%)
     &.show
       transition all 0.5s
       transform scaleY(0)
       +mq(0, 480px)
         top 0
-        transform scaleY(1) translateY(2000px)
+        transform scaleY(1) translateY(100%)
       &.open
         transform scaleY(1)
         +mq(0, 480px)
@@ -97,7 +97,7 @@
       top 60px
       transform translateY(0)
       height auto
-      max-height 80%
+      max-height 100%
       padding 0
     .CPCblock
       background #f6f3ef
@@ -112,7 +112,7 @@
         transition opacity 0.3s 0.5s ease-in
         opacity 0
       +mq(1050px)
-        background-size 60%
+        background-size 50%
       +mq(0, 480px)
         height auto
         max-height 100%
@@ -127,15 +127,17 @@
       font-weight 700
       line-height 38px
       text-align center
-      padding 13px 0 67px 0
+      padding 13px 15% 67px 15%
       opacity 1
       will-change opacity
       &.hide
         opacity 0
       +mq(481px,849px)
+        padding 13px 10% 67px 10%
         font-size 30px
         line-height 34px
       +mq(0, 480px)
+        padding 13px 0 40px 0
         font-size 22px
         line-height 26px
     .text
@@ -145,19 +147,23 @@
       font-weight 400
       line-height 26px
       text-align center
-      padding-bottom 60px
+      margin 0 15% 60px 15%
       will-change opacity
+      strong
+        font-family BanderaProBold
+        font-weight 700
+      p + p
+        margin-top 10px
       &.hide
         opacity 0
-      +mq(768px,849px)
+      +mq(481px,849px)
         font-size 16px
         line-height 22px
-      +mq(481px,767px)
-        font-size 16px
-        line-height 22px
+        margin 0 10% 60px 10%
       +mq(0, 480px)
         font-size 12px
         line-height 17px
+        margin 0 0 40px 0
     .button
       position relative
       width 200px

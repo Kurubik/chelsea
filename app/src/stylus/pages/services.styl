@@ -67,6 +67,8 @@
       opacity 1
       transform scale(1)
       will-change transform, opacity
+      &.noPointer
+        cursor auto
       &.hide
         transform scale(0)
         opacity 0
@@ -250,9 +252,11 @@
         display block
         margin 46px auto 35px auto
         transition all 0.4s
-        will-change transform
+        will-change transform, opacity
+        opacity 1
         &.hide
           transform translateY(70px)
+          opacity 0
           +mq(768px,1170px)
             transform translateY(50px)
           +mq(0,767px)
@@ -282,7 +286,9 @@
         transform rotate(180deg) translateY(0)
         transition all 0.4s
         will-change transform
+        opacity 1
         &.hide
+          opacity 0
           transform translateY(-50px) rotate(180deg)
           +mq(768px,1170px)
             transform translateY(-30px) rotate(180deg)
@@ -301,100 +307,100 @@
             fill #f6f3ef
 
   .block[data-anim-serv="0"]
-    transition all 0.9s ease
-    transition-delay 0.1s
+    transition all 1s ease
+    transition-delay 0.3s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.5s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.5s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.5s
   .block[data-anim-serv="1"]
-    transition all 0.9s ease
-    transition-delay 0.5s
+    transition all 1s ease
+    transition-delay 0.7s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.9s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.9s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 0.9s
   .block[data-anim-serv="2"]        //empty
-    transition all 0.9s ease
-    transition-delay 1s
+    transition all 1s ease
+    transition-delay 0.5s
   .block[data-anim-serv="3"]
-    transition all 0.9s ease
-    transition-delay 0.9s
+    transition all 1s ease
+    transition-delay 0.5s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
-      transition-delay 1s
+      transition all 1s ease
+      transition-delay 1.3s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
-      transition-delay 1s
+      transition all 1s ease
+      transition-delay 1.3s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
-      transition-delay 1s
+      transition all 1s ease
+      transition-delay 1.3s
   .block[data-anim-serv="4"]          //center block
-    transition all 0.9s ease
+    transition all 0.5s ease
     transition-delay 1s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 1.5s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 1.5s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
+      transition all 1s ease
       transition-delay 1.5s
   .block[data-anim-serv="5"]
-    transition all 0.9s ease
-    transition-delay 1s
+    transition all 1s ease
+    transition-delay 0.5s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
-      transition-delay 2s
+      transition all 1s ease
+      transition-delay 1.7s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
-      transition-delay 2s
+      transition all 1s ease
+      transition-delay 1.7s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
-      transition-delay 2s
+      transition all 1s ease
+      transition-delay 1.7s
   .block[data-anim-serv="6"]          //empty
-    transition all 0.9s ease
-    transition-delay 0.9s
+    transition all 1s ease
+    transition-delay 0.5s
   .block[data-anim-serv="7"]
-    transition all 0.9s ease
+    transition all 0.5s ease
     transition-delay 1s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
-      transition-delay 2.5s
+      transition all 1s ease
+      transition-delay 1.9s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
-      transition-delay 2.5s
+      transition all 1s ease
+      transition-delay 1.9s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
-      transition-delay 2.5s
-  .block[data-anim-serv="8"]
-    transition all 0.9s ease
-    transition-delay 1s
+      transition all 1s ease
+      transition-delay 1.9s
+  .block[data-anim-serv="8"]    //last
+    transition all 1s ease
+    transition-delay 0.5s
     [data-anim-serv="11"]       //icons
-      transition all 0.9s ease
-      transition-delay 2.5s
+      transition all 1s ease
+      transition-delay 2.1s
     [data-anim-serv="12"]       //text
-      transition all 0.9s ease
-      transition-delay 2.5s
+      transition all 1s ease
+      transition-delay 2.1s
     [data-anim-serv="13"]       //buttons
-      transition all 0.9s ease
-      transition-delay 2.5s
+      transition all 1s ease
+      transition-delay 2.1s
   [data-anim-serv="9"]          //triangles
-    transition all 0.9s ease
-    transition-delay 1.5s
+    transition all 1s ease
+    transition-delay 1.3s
     +mq(0,480px)
-      transition-delay 0.9s
+      transition-delay 1.3s
   [data-anim-serv="10"]          //triangles
-    transition all 0.9s ease
-    transition-delay 2s
+    transition all 1s ease
+    transition-delay 1.3s
