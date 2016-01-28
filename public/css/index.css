@@ -1366,7 +1366,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .aboutHeader .languages ul li {
-    padding-left: 30px;
+    padding-left: 40px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 767px) {
@@ -1518,7 +1518,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .aboutHeader .menuContainer .headerMenu li {
-    padding-left: 40px;
+    padding-left: 30px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 767px) {
