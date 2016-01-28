@@ -75,7 +75,92 @@
     margin 0 auto
     width 252px
     height 153px
+    position relative
+    .topCube
+      position absolute
+      width 15px
+      height 15px
+      background #3d4574
+      overflow hidden
+      +mq(0, 480px)
+        width 9px
+        height 10px
+      .topCubeTriangle
+        position absolute
+        display inline-block
+        height 0
+        width 0
+        will-change transform
+        transition transform 0.5s ease 0.6s
+      &.left
+        left 83px
+        top 100px
+        height 33px
+        +mq(0, 480px)
+          left 56px
+          top 61px
+          height 22px
+          width 10px
+        .topCubeTriangle
+          top 18px
+          border-bottom 15px solid #cd2430
+          border-left 15px solid transparent
+          +mq(0, 480px)
+            top 12px
+            border-bottom 10px solid #cd2430
+            border-left 10px solid transparent
+      &.leftCenter
+        top 118px
+        left 101px
+        +mq(0, 480px)
+          left 68px
+          top 73px
+        .topCubeTriangle
+          border-top 15px solid #cd2430
+          border-right 15px solid transparent
+          +mq(0, 480px)
+            border-top 10px solid #cd2430
+            border-right 10px solid transparent
+      &.rightCenter
+        top 83px
+        left 136px
+        +mq(0, 480px)
+          left 91px
+          top 50px
+        .topCubeTriangle
+          border-bottom 15px solid #cd2430
+          border-left 15px solid transparent
+          +mq(0, 480px)
+            border-bottom 10px solid #cd2430
+            border-left 10px solid transparent
+      &.right
+        top 83px
+        left 153px
+        height 32px
+        +mq(0, 480px)
+          top 50px
+          left 102px
+          height 21px
+        .topCubeTriangle
+          border-top 15px solid #cd2430
+          border-right 15px solid transparent
+          +mq(0, 480px)
+            border-top 10px solid #cd2430
+            border-right 10px solid transparent
     &.hide
+      .topCube
+        &.left
+          .topCubeTriangle
+            transform translate(50%,50%)
+        &.leftCenter
+          .topCubeTriangle
+            transform translate(-50%,-50%)
+        &.rightCenter
+          .topCubeTriangle
+            transform translate(50%,50%)
+        &.right
+          .topCubeTriangle
+            transform translate(-50%,-50%)
       svg
         .color
           fill #3d4574
@@ -83,7 +168,7 @@
             transition-delay 0.4s
     +mq(0, 480px)
       padding 50px 0 0 0
-      width 167px
+      width 168px
       height 101px
     svg
       width 100%

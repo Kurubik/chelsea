@@ -71,7 +71,6 @@
     &.hide
       opacity 0
       margin -70px -40px 0 0
-      top 15%
       +mq(0, 480px)
         width 21px
         height 21px
@@ -113,6 +112,8 @@
         opacity 0
       +mq(1050px)
         background-size 50%
+      +mq(481px, 770px)
+        background-size 75%
       +mq(0, 480px)
         height auto
         max-height 100%
@@ -145,7 +146,7 @@
       color #242424
       font-size 18px
       font-weight 400
-      line-height 26px
+      line-height 22px
       text-align center
       margin 0 15% 60px 15%
       will-change opacity
@@ -246,7 +247,7 @@
     transition-delay 0.5s
   [data-anim-popup="2"]
     transition all 0.4s
-    transition-delay 0.5s
+    transition-delay 0.9s
   [data-anim-popup="3"]
     transition all 0.4s
     transition-delay 0.5s

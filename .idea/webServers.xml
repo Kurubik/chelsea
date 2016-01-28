@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="af5d2bf0-3192-409e-8baa-24348c6de55e" name="speles" url="http://smallsquad.com">
+        <fileTransfer host="smallsquad.com" port="21" password="dffedfdfdf9cdfcedfccdfc9dfd9dff8df9edf8cdfe6df81" username="speles">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
