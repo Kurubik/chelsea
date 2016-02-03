@@ -376,11 +376,23 @@ th {
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .about [data-anim-about="3"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
 .about [data-anim-about="4"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
+}
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .about [data-anim-about="4"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 .chelsea {
   background-image: url("../assets/images/london.jpg");
@@ -579,6 +591,12 @@ th {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .chelsea [data-anim-chel="1"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
 .chelsea [data-anim-chel="2"] {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -589,11 +607,23 @@ th {
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .chelsea [data-anim-chel="3"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
 .chelsea [data-anim-chel="4"] {
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
+}
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .chelsea [data-anim-chel="4"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 * {
   margin: 0;
@@ -678,7 +708,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 790px) {
   .viewBlock {
-    top: 9%;
+    top: 96%;
   }
 }
 .wrapper {
@@ -2853,17 +2883,35 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="0"] {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
 .services .block[data-anim-serv="0"] [data-anim-serv="11"] {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="0"] [data-anim-serv="11"] {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+}
 .services .block[data-anim-serv="0"] [data-anim-serv="12"] {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-transition-delay: 0.7s;
   transition-delay: 0.7s;
+}
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="0"] [data-anim-serv="12"] {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
 }
 .services .block[data-anim-serv="0"] [data-anim-serv="13"] {
   -webkit-transition: all 1s ease;
@@ -2877,11 +2925,23 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="1"] {
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+  }
+}
 .services .block[data-anim-serv="1"] [data-anim-serv="11"] {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-transition-delay: 1.4s;
   transition-delay: 1.4s;
+}
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="1"] [data-anim-serv="11"] {
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+  }
 }
 .services .block[data-anim-serv="1"] [data-anim-serv="12"] {
   -webkit-transition: all 1s ease;
@@ -2889,11 +2949,23 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition-delay: 1.4s;
   transition-delay: 1.4s;
 }
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="1"] [data-anim-serv="12"] {
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+  }
+}
 .services .block[data-anim-serv="1"] [data-anim-serv="13"] {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   -webkit-transition-delay: 1.4s;
   transition-delay: 1.4s;
+}
+@media only screen and (min-width: 0px) and (max-width: 770px) {
+  .services .block[data-anim-serv="1"] [data-anim-serv="13"] {
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+  }
 }
 .services .block[data-anim-serv="2"] {
   -webkit-transition: all 1s ease;
@@ -3379,7 +3451,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   position: absolute;
   list-style: none;
   z-index: 2;
-  width: 605px;
+  width: 608px;
   left: 0;
   right: 0;
   margin: 0 auto;
