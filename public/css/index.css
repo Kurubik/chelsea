@@ -2054,6 +2054,11 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   font-size: 16px;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
+  [lang="ru"] .blocksPopup .textBlock .button button {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .button button {
     font-size: 14px;
   }
@@ -2443,6 +2448,12 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 [lang="ru"] .request .formHolder .button button,
 [lang="ru"] .request .formHolder .thanksMessage .button button {
   font-size: 16px;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  [lang="ru"] .request .formHolder .button button,
+  [lang="ru"] .request .formHolder .thanksMessage .button button {
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .request .formHolder .button button,
@@ -3783,7 +3794,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   [lang="ru"] .top .textContainer .topText {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 .top .textContainer .topText span {
@@ -3912,6 +3923,6 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 .top [data-anim-top="4"] {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transition-delay: 1s;
-  transition-delay: 1s;
+  -webkit-transition-delay: 1.2s;
+  transition-delay: 1.2s;
 }
