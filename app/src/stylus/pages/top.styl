@@ -306,6 +306,8 @@
     will-change transform
     &.hide
       transform rotateX(-90deg)
+      +mq(0, 480px)
+        transform rotateX(0)
     .topText
       position absolute
       display inline-block

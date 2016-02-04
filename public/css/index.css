@@ -3735,6 +3735,12 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .top .textContainer.hide {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+}
 .top .textContainer .topText {
   position: absolute;
   display: inline-block;
