@@ -23,6 +23,8 @@
     z-index 9
     position relative
     will-change transform
+    [lang="ru"] &
+      margin 297px 0 0 46.4%
     &.hide
       transform translateX(1000px)
     +mq(850px,1170px)
@@ -31,7 +33,11 @@
     +mq(768px,849px)
       font-size 110px
       line-height 75px
-      margin 360px 0 0 40%
+      margin 360px 0 0 38%
+      [lang="ru"] &
+        font-size 110px
+        line-height 75px
+        margin 360px 0 0 35%
     +mq(481px,767px)
       font-size 110px
       line-height 75px
@@ -40,6 +46,8 @@
       margin 243px 0 0 80px
       font-size 55px
       line-height 35px
+      [lang="ru"] &
+        margin 243px 0 0 76px
     .titleRed
       color #cd2430
     .titleWhite
@@ -86,6 +94,7 @@
         +mq(481px,767px)
           font-size 14px
         +mq(0, 480px)
+          padding 0 30px
           font-size 11px
       span
         display inline-block

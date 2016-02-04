@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="985532c3-9fb3-4648-a18a-180dc05c9794" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/about.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/about.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/popup.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/popup.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/request.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/request.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/top.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/top.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/stylus/pages/services.styl" afterPath="$PROJECT_DIR$/app/src/stylus/pages/services.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
     </list>
     <ignored path="chelsea.iws" />
@@ -34,7 +36,7 @@
     <favorites_list name="chelsea" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5163044">
+    <splitter split-orientation="horizontal" split-proportion="0.5298913">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.twig" pinned="false" current-in-tab="false">
@@ -70,8 +72,8 @@
           <file leaf-file-name="about.styl" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/about.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.311272">
-                  <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.93071353">
+                  <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -80,8 +82,8 @@
           <file leaf-file-name="chelsea.styl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-18.75">
-                  <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+                <state vertical-scroll-proportion="-20.625">
+                  <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -154,8 +156,8 @@
           <file leaf-file-name="popup.styl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/popup.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-30.375">
-                  <caret line="246" column="26" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
+                <state vertical-scroll-proportion="-26.0">
+                  <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -191,11 +193,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="request.styl" pinned="false" current-in-tab="true">
+          <file leaf-file-name="services.styl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/services.styl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-20.0">
+                  <caret line="247" column="26" selection-start-line="247" selection-start-column="26" selection-end-line="247" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.yml" pinned="true" current-in-tab="true">
+            <entry file="REMOTE_DEPLOYMENT_FS://&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/app/config/config.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.4874214">
+                  <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="request.styl" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/request.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.893485">
-                  <caret line="225" column="10" selection-start-line="225" selection-start-column="10" selection-end-line="226" selection-end-column="26" />
+                <state vertical-scroll-proportion="-28.416666">
+                  <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -250,20 +272,20 @@
         <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/theme/chelsea/popups/popups.twig" />
         <option value="$PROJECT_DIR$/app/templates/head.twig" />
         <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/theme/chelsea/head.twig" />
-        <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/templates/scripts.twig" />
         <option value="$PROJECT_DIR$/app/src/stylus/pages/main.styl" />
         <option value="$PROJECT_DIR$/app/templates/index.twig" />
-        <option value="$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl" />
-        <option value="$PROJECT_DIR$/app/src/stylus/pages/about.styl" />
-        <option value="$PROJECT_DIR$/app/src/stylus/pages/services.styl" />
         <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/theme/chelsea/layout.twig" />
         <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/src/Controllers/Frontend.php" />
         <option value="$PROJECT_DIR$/app/src/js/main.js" />
         <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/theme/chelsea/index.twig" />
-        <option value="$PROJECT_DIR$/app/src/stylus/pages/request.styl" />
-        <option value="$PROJECT_DIR$/app/src/stylus/pages/popup.styl" />
         <option value="$PROJECT_DIR$/app/src/stylus/pages/top.styl" />
+        <option value="$PROJECT_DIR$/app/src/stylus/pages/popup.styl" />
+        <option value="$PROJECT_DIR$/app/src/stylus/pages/request.styl" />
+        <option value="$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl" />
+        <option value="$PROJECT_DIR$/app/src/stylus/pages/services.styl" />
+        <option value="$PROJECT_DIR$/app/src/stylus/pages/about.styl" />
+        <option value="&lt;af5d2bf0-3192-409e-8baa-24348c6de55e&gt;/public_html/chelsea/app/config/config.yml" />
       </list>
     </option>
   </component>
@@ -343,10 +365,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1063,14 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75">
-          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/head.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
@@ -1095,22 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/services.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-106.25">
-          <caret line="257" column="26" selection-start-line="257" selection-start-column="26" selection-end-line="257" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/popup.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.375">
-          <caret line="246" column="26" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/top.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-124.75">
@@ -1119,18 +1113,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/about.styl">
+    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/popup.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.311272">
-          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        <state vertical-scroll-proportion="-26.0">
+          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/request.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.893485">
-          <caret line="225" column="10" selection-start-line="225" selection-start-column="10" selection-end-line="226" selection-end-column="26" />
+        <state vertical-scroll-proportion="-28.416666">
+          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/chelsea.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.625">
+          <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/about.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93071353">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/stylus/pages/services.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="247" column="26" selection-start-line="247" selection-start-column="26" selection-end-line="247" selection-end-column="26" />
           <folding />
         </state>
       </provider>

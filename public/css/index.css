@@ -249,6 +249,9 @@ th {
     font-size: 55px;
     line-height: 35px;
   }
+  [lang="ru"] .about .titleText {
+    margin: 0 0 0 20px;
+  }
 }
 .about .titleText .titleRed {
   color: #cd2430;
@@ -317,6 +320,7 @@ th {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   [lang="ru"] .about .textContainer .aboutText {
+    padding: 0 35px;
     font-size: 11px;
   }
 }
@@ -474,6 +478,9 @@ th {
   position: relative;
   will-change: transform;
 }
+[lang="ru"] .chelsea .titleText {
+  margin: 297px 0 0 46.4%;
+}
 .chelsea .titleText.hide {
   -webkit-transform: translateX(1000px);
   transform: translateX(1000px);
@@ -488,7 +495,12 @@ th {
   .chelsea .titleText {
     font-size: 110px;
     line-height: 75px;
-    margin: 360px 0 0 40%;
+    margin: 360px 0 0 38%;
+  }
+  [lang="ru"] .chelsea .titleText {
+    font-size: 110px;
+    line-height: 75px;
+    margin: 360px 0 0 35%;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
@@ -503,6 +515,9 @@ th {
     margin: 243px 0 0 80px;
     font-size: 55px;
     line-height: 35px;
+  }
+  [lang="ru"] .chelsea .titleText {
+    margin: 243px 0 0 76px;
   }
 }
 .chelsea .titleText .titleRed {
@@ -577,6 +592,7 @@ th {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   [lang="ru"] .chelsea .textContainer .chelseaText {
+    padding: 0 30px;
     font-size: 11px;
   }
 }
@@ -1911,6 +1927,9 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
     font-size: 22px;
     line-height: 26px;
   }
+  [lang="ru"] .blocksPopup .textBlock .title {
+    font-size: 20px;
+  }
 }
 .blocksPopup .textBlock .text {
   font-family: BanderaPro;
@@ -2320,16 +2339,25 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   text-align: center;
   padding-bottom: 56px;
 }
+[lang="ru"] .request .formHolder .thanksMessage .message {
+  font-size: 27px;
+}
 @media only screen and (min-width: 700px) and (max-width: 850px) {
   .request .formHolder .thanksMessage .message {
     font-size: 24px;
     line-height: 30px;
+  }
+  [lang="ru"] .request .formHolder .thanksMessage .message {
+    font-size: 21px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 700px) {
   .request .formHolder .thanksMessage .message {
     font-size: 18px;
     line-height: 23px;
+  }
+  [lang="ru"] .request .formHolder .thanksMessage .message {
+    font-size: 16px;
   }
 }
 .request .formHolder .button,
@@ -2867,26 +2895,30 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   will-change: transform, opacity;
 }
 [lang="ru"] .services .blocks .block .text {
-  font-size: 22px;
-  padding: 0 15px;
+  font-size: 20px;
+  padding: 0 40px;
 }
 @media only screen and (min-width: 850px) and (max-width: 1170px) {
   [lang="ru"] .services .blocks .block .text {
-    font-size: 14px;
+    padding: 0 31px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 849px) {
   [lang="ru"] .services .blocks .block .text {
-    font-size: 14px;
+    padding: 0 31px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   [lang="ru"] .services .blocks .block .text {
+    padding: 0 15px;
     font-size: 10px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   [lang="ru"] .services .blocks .block .text {
+    padding: 0 15px;
     font-size: 10px;
   }
 }
