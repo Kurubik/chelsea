@@ -231,6 +231,17 @@
         opacity 1
         transform scale(1)
         will-change transform, opacity
+        [lang="ru"] &
+          font-size 22px
+          padding 0 15px
+          +mq(850px,1170px)
+            font-size 14px
+          +mq(768px,849px)
+            font-size 14px
+          +mq(481px,767px)
+            font-size 10px
+          +mq(0, 480px)
+            font-size 10px
         &.hide
           opacity 0
         +mq(850px,1170px)

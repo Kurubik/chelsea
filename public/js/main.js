@@ -224,6 +224,8 @@ $(document).ready(function() {
         e.preventDefault();
         $('body').addClass('noEvents');
         var block = $(this).attr('data-request');
+        var title = $('[data-requet-title="' + block + '"]').text();
+        $('[data-request-type="all"]').val(title);
         poupAnimation('[data-block="'+ block + '"]', 'end');
         setTimeout( function() {
             $('[data-block="'+ block + '"]').removeClass('open');

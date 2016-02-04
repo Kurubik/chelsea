@@ -64,7 +64,7 @@
       color #f6f3ef
       font-size 16px
       font-weight 400
-      line-height 24px
+      line-height 210px
       text-align center
       position absolute
       z-index 9
@@ -72,32 +72,53 @@
       right 0
       margin 0 auto
       width 900px
-      padding 57px 5px 0 10px
+      padding 0 5px 0 10px
       min-width 320px
       opacity 1
       will-change opacity
+      height 210px
+      [lang="ru"] &
+        font-size 15px
+        +mq(850px,1170px)
+          font-size 14px
+        +mq(768px,849px)
+          font-size 14px
+        +mq(481px,767px)
+          font-size 14px
+        +mq(0, 480px)
+          font-size 11px
+      span
+        display inline-block
+        line-height 24px
+        vertical-align middle
+        +mq(850px,1170px)
+          line-height 23px
+        +mq(768px,849px)
+          line-height 22px
+        +mq(481px,767px)
+          line-height 22px
+        +mq(0, 480px)
+          line-height 17px
       &.hide
         opacity 0
       +mq(850px,1170px)
         width 100%
         font-size 15px
-        line-height 23px
-        padding 57px 75px 0 85px
+        padding 0 75px 0 85px
       +mq(481px,849px)
         width 100%
         font-size 14px
-        line-height 22px
-        padding 57px 80px 0 85px
+        padding 0 80px 0 85px
       +mq(481px,767px)
         width 100%
         font-size 14px
-        line-height 22px
-        padding 30px 40px 0 45px
+        padding 0 40px 0 45px
       +mq(0, 480px)
         font-size 12px
-        line-height 17px
-        padding 46px 50px
+        line-height 278px
+        padding 0 50px
         width 100%
+        height 278px
     .textHolder
       display inline-block
       opacity 0.8
