@@ -25,4 +25,14 @@ $pages->get('/{_locale}/',
   ->assert('_locale', 'en')
   ->bind('home');
 
+$pages->get('/404',
+    function() use ($app) {
+        return $app['twig']->render('/404.twig', array (
+            'data' => Data\Translates::translateArray($app['locale']),
+        ));
+    }
+)
+    ->assert('_locale', 'en')
+    ->bind('404');
+
 return $pages;

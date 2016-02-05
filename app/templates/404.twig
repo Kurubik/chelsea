@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+{% include 'head.twig' %}
+<body>
+<div class="container error">
+    <div class="wrapper error">
+        <section class="error404">
+            <div class="box">
+                <div class="bigText">
+                    404
+                </div>
+                <div class="sorryText">
+                    SORRY BUT THIS PAGE DOESN'T EXIST
+                </div>
+                <div class="button" data-tap="button">
+                    <button onclick="javascript:location.href='/en'" class="hide" type="button">home page</button>
+                    <div data-anim-thanks="0" class="buttonHolder"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

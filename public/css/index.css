@@ -810,6 +810,10 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   overflow: hidden;
   min-width: 320px;
 }
+.container.error {
+  height: 100%;
+  position: absolute;
+}
 .viewBlock {
   position: fixed;
   top: 70%;
@@ -828,6 +832,10 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   will-change: transform;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+.wrapper.error {
+  height: 100%;
+  position: relative;
 }
 .wrapper.langMenuOpen {
   -webkit-transform: translateY(60px);
@@ -1186,6 +1194,169 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   fill: #242424;
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
+}
+.error404 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f3ef;
+}
+.error404 .box {
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.error404 .box .bigText {
+  font-family: BanderaProBold;
+  color: #3d4574;
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: center;
+}
+.error404 .box .sorryText {
+  font-family: BanderaPro;
+  color: #3d4574;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding: 46px 0 24px 0;
+}
+.error404 .box .button,
+.error404 .box .thanksMessage .button {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 20px auto 0 auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.3 ease;
+  transition: opacity 0.3 ease;
+}
+.error404 .box .button.hide,
+.error404 .box .thanksMessage .button.hide {
+  opacity: 0;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .error404 .box .button,
+  .error404 .box .thanksMessage .button {
+    width: 170px;
+  }
+}
+.error404 .box .button.tap .buttonHolder:before,
+.error404 .box .thanksMessage .button.tap .buttonHolder:before {
+  -webkit-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+}
+.error404 .box .button:active .buttonHolder:before,
+.error404 .box .thanksMessage .button:active .buttonHolder:before,
+.error404 .box .button:hover .buttonHolder:before,
+.error404 .box .thanksMessage .button:hover .buttonHolder:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+@media only screen and (min-width: 0) and (max-width: 770px) {
+  .error404 .box .button:active .buttonHolder:before,
+  .error404 .box .thanksMessage .button:active .buttonHolder:before,
+  .error404 .box .button:hover .buttonHolder:before,
+  .error404 .box .thanksMessage .button:hover .buttonHolder:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+}
+.error404 .box .button .buttonHolder,
+.error404 .box .thanksMessage .button .buttonHolder {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  width: 100%;
+  height: 100%;
+  background: #cd2430;
+  will-change: transform;
+  -webkit-transform: skew(-45deg) scaleX(1);
+  transform: skew(-45deg) scaleX(1);
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.error404 .box .button .buttonHolder.showBG,
+.error404 .box .thanksMessage .button .buttonHolder.showBG {
+  -webkit-transform: skew(-45deg) scaleX(1);
+  transform: skew(-45deg) scaleX(1);
+}
+.error404 .box .button .buttonHolder:before,
+.error404 .box .thanksMessage .button .buttonHolder:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #3d4574;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.error404 .box .button button,
+.error404 .box .thanksMessage .button button {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  z-index: 9;
+  background: none;
+  font-family: BanderaProBold;
+  color: #f6f3ef;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.error404 .box .button button a,
+.error404 .box .thanksMessage .button button a {
+  text-decoration: none;
+  color: inherit;
+}
+[lang="ru"] .error404 .box .button button,
+[lang="ru"] .error404 .box .thanksMessage .button button {
+  font-size: 16px;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  [lang="ru"] .error404 .box .button button,
+  [lang="ru"] .error404 .box .thanksMessage .button button {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .error404 .box .button button,
+  .error404 .box .thanksMessage .button button {
+    font-size: 14px;
+  }
 }
 .menu {
   position: fixed;
