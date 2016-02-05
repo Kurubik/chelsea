@@ -1216,6 +1216,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   text-align: center;
 }
 .error404 .box .sorryText {
+  text-transform: uppercase;
   font-family: BanderaPro;
   color: #3d4574;
   font-size: 30px;
