@@ -251,6 +251,9 @@ th {
   }
   [lang="ru"] .about .titleText {
     margin: 0 0 0 20px;
+    padding-top: 257px;
+    font-size: 40px;
+    line-height: 27px;
   }
 }
 .about .titleText .titleRed {
@@ -336,12 +339,12 @@ th {
 }
 @media only screen and (min-width: 768px) and (max-width: 849px) {
   .about .textContainer .aboutText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .about .textContainer .aboutText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
@@ -473,7 +476,7 @@ th {
   font-weight: 700;
   line-height: 100px;
   text-align: right;
-  margin: 297px 0 0 45%;
+  margin: 297px 0 0 48.5%;
   z-index: 9;
   position: relative;
   will-change: transform;
@@ -517,7 +520,9 @@ th {
     line-height: 35px;
   }
   [lang="ru"] .chelsea .titleText {
-    margin: 243px 0 0 76px;
+    margin: 260px 0 0 142px;
+    font-size: 40px;
+    line-height: 27px;
   }
 }
 .chelsea .titleText .titleRed {
@@ -608,12 +613,12 @@ th {
 }
 @media only screen and (min-width: 768px) and (max-width: 849px) {
   .chelsea .textContainer .chelseaText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .chelsea .textContainer .chelseaText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
@@ -703,8 +708,8 @@ th {
 }
 @media only screen and (min-width: 0px) and (max-width: 770px) {
   .chelsea [data-anim-chel="1"] {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
   }
 }
 .chelsea [data-anim-chel="2"] {
@@ -719,8 +724,8 @@ th {
 }
 @media only screen and (min-width: 0px) and (max-width: 770px) {
   .chelsea [data-anim-chel="3"] {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
   }
 }
 .chelsea [data-anim-chel="4"] {
@@ -731,8 +736,8 @@ th {
 }
 @media only screen and (min-width: 0px) and (max-width: 770px) {
   .chelsea [data-anim-chel="4"] {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
   }
 }
 * {
@@ -1225,8 +1230,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   text-align: center;
   padding: 46px 0 24px 0;
 }
-.error404 .box .button,
-.error404 .box .thanksMessage .button {
+.error404 .box .button {
   position: relative;
   width: 200px;
   height: 50px;
@@ -1237,39 +1241,33 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition: opacity 0.3 ease;
   transition: opacity 0.3 ease;
 }
-.error404 .box .button.hide,
-.error404 .box .thanksMessage .button.hide {
+.error404 .box .button.hide {
   opacity: 0;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
-  .error404 .box .button,
-  .error404 .box .thanksMessage .button {
+  .error404 .box .button {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
     width: 170px;
   }
 }
-.error404 .box .button.tap .buttonHolder:before,
-.error404 .box .thanksMessage .button.tap .buttonHolder:before {
+.error404 .box .button.tap .buttonHolder:before {
   -webkit-transform: scaleX(1) !important;
   transform: scaleX(1) !important;
 }
 .error404 .box .button:active .buttonHolder:before,
-.error404 .box .thanksMessage .button:active .buttonHolder:before,
-.error404 .box .button:hover .buttonHolder:before,
-.error404 .box .thanksMessage .button:hover .buttonHolder:before {
+.error404 .box .button:hover .buttonHolder:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 @media only screen and (min-width: 0) and (max-width: 770px) {
   .error404 .box .button:active .buttonHolder:before,
-  .error404 .box .thanksMessage .button:active .buttonHolder:before,
-  .error404 .box .button:hover .buttonHolder:before,
-  .error404 .box .thanksMessage .button:hover .buttonHolder:before {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
+  .error404 .box .button:hover .buttonHolder:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-.error404 .box .button .buttonHolder,
-.error404 .box .thanksMessage .button .buttonHolder {
+.error404 .box .button .buttonHolder {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   width: 100%;
@@ -1295,13 +1293,11 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.error404 .box .button .buttonHolder.showBG,
-.error404 .box .thanksMessage .button .buttonHolder.showBG {
+.error404 .box .button .buttonHolder.showBG {
   -webkit-transform: skew(-45deg) scaleX(1);
   transform: skew(-45deg) scaleX(1);
 }
-.error404 .box .button .buttonHolder:before,
-.error404 .box .thanksMessage .button .buttonHolder:before {
+.error404 .box .button .buttonHolder:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1321,8 +1317,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.error404 .box .button button,
-.error404 .box .thanksMessage .button button {
+.error404 .box .button button {
   left: 0;
   position: absolute;
   width: 100%;
@@ -1338,24 +1333,20 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   font-weight: 700;
   text-align: center;
 }
-.error404 .box .button button a,
-.error404 .box .thanksMessage .button button a {
+.error404 .box .button button a {
   text-decoration: none;
   color: inherit;
 }
-[lang="ru"] .error404 .box .button button,
-[lang="ru"] .error404 .box .thanksMessage .button button {
+[lang="ru"] .error404 .box .button button {
   font-size: 16px;
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
-  [lang="ru"] .error404 .box .button button,
-  [lang="ru"] .error404 .box .thanksMessage .button button {
+  [lang="ru"] .error404 .box .button button {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
-  .error404 .box .button button,
-  .error404 .box .thanksMessage .button button {
+  .error404 .box .button button {
     font-size: 14px;
   }
 }
@@ -1940,8 +1931,11 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   .blocksPopup .Block {
     overflow-y: hidden;
     top: 0;
-    -webkit-transform: scaleY(1) translateY(100%);
-    transform: scaleY(1) translateY(100%);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 .blocksPopup .Block.show {
@@ -1953,8 +1947,11 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .Block.show {
     top: 0;
-    -webkit-transform: scaleY(1) translateY(100%);
-    transform: scaleY(1) translateY(100%);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 .blocksPopup .Block.show.open {
@@ -1966,6 +1963,9 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
     top: 0;
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 .blocksPopup .closePopup {
@@ -2000,14 +2000,17 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
   .blocksPopup .closePopup.hide {
     width: 21px;
     height: 21px;
-    margin: -40px 20px 0 0;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .closePopup {
     width: 21px;
     height: 21px;
-    margin: -40px 20px 0 0;
+    margin: 0;
+    top: 20px;
+    right: 20px;
+    position: absolute;
   }
 }
 .blocksPopup .closePopup svg {
@@ -2016,6 +2019,11 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 .blocksPopup .closePopup svg path {
   fill: #f6f3ef;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .blocksPopup .closePopup svg path {
+    fill: #cd2430;
+  }
 }
 .blocksPopup .textBlock {
   position: relative;
@@ -2029,11 +2037,10 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock {
-    top: 60px;
+    top: 0;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    height: auto;
-    max-height: 100%;
+    height: 100%;
     padding: 0;
   }
 }
@@ -2065,10 +2072,14 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .CPCblock {
+    position: relative;
     height: auto;
-    max-height: 100%;
+    max-height: 80%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     overflow-y: auto;
-    padding: 49px 53px;
+    padding: 0 30px;
     background-size: 170%;
   }
 }
@@ -2168,6 +2179,8 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .blocksPopup .textBlock .button {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
     width: 170px;
   }
 }
@@ -2513,6 +2526,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 [lang="ru"] .request .formHolder .thanksMessage .message {
   font-size: 27px;
+  padding: 0 70px 56px 70px;
 }
 @media only screen and (min-width: 700px) and (max-width: 850px) {
   .request .formHolder .thanksMessage .message {
@@ -2529,6 +2543,7 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
     line-height: 23px;
   }
   [lang="ru"] .request .formHolder .thanksMessage .message {
+    padding: 0 30px 56px 30px;
     font-size: 16px;
   }
 }
@@ -2551,6 +2566,8 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .request .formHolder .button,
   .request .formHolder .thanksMessage .button {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
     width: 170px;
   }
 }
@@ -4008,12 +4025,12 @@ body:not(.popup) .menu:not(.hide) .aboutMenu {
 }
 @media only screen and (min-width: 768px) and (max-width: 849px) {
   .top .textContainer .topText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .top .textContainer .topText span {
-    line-height: 22px;
+    line-height: 20px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {

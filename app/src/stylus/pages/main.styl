@@ -368,7 +368,7 @@ body
       line-height 24px
       text-align center
       padding 46px 0 24px 0
-    .button, .thanksMessage .button
+    .button
       position relative
       width 200px
       height 50px
@@ -379,6 +379,7 @@ body
       &.hide
         opacity 0
       +mq(0, 480px)
+        transform scale(0.7)
         width 170px
       &.tap
         .buttonHolder:before
@@ -387,7 +388,7 @@ body
         .buttonHolder:before
           transform scaleX(1)
           +mq(0, 770px)
-            transform scaleX(0)
+            transform scaleX(1)
       .buttonHolder
         transition transform 0.3s
         width 100%

@@ -39,12 +39,12 @@ $(document).ready(function() {
             $('[data-block="'+ block + '"]').addClass('open');
             poupAnimation('[data-block="'+ block + '"]', 'start');
         }, 500);
-        if (Modernizr.mq('(max-width: 480px)')) {
+        /*if (Modernizr.mq('(max-width: 480px)')) {
             var blockHeight = $('[data-block="'+ block + '"]').find('.CPCblock').height();
             if (($(window).height() - 120) < blockHeight) {
                 $('[data-block="'+ block + '"] .CPCblock').css('height', ($(window).height()-70) + "px" );
             }
-        }
+        }*/
         $('body').addClass('popup');
     });
 

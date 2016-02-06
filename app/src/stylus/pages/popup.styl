@@ -43,18 +43,24 @@
     +mq(0, 480px)
       overflow-y hidden
       top 0
-      transform scaleY(1) translateY(100%)
+      transform scaleY(0)
+      padding 15px
+      box-sizing border-box
     &.show
       transition all 0.5s
       transform scaleY(0)
       +mq(0, 480px)
         top 0
-        transform scaleY(1) translateY(100%)
+        transform scaleY(0)
+        padding 15px
+        box-sizing border-box
       &.open
         transform scaleY(1)
         +mq(0, 480px)
           transform scaleY(1)
           top 0
+          padding 15px
+          box-sizing border-box
   .closePopup
     position absolute
     cursor pointer
@@ -77,16 +83,21 @@
       +mq(0, 480px)
         width 21px
         height 21px
-        margin -40px 20px 0 0
+        margin 0
     +mq(0, 480px)
       width 21px
       height 21px
-      margin -40px 20px 0 0
+      margin 0
+      top 20px
+      right 20px
+      position absolute
     svg
       width 100%
       height 100%
       path
         fill #f6f3ef
+        +mq(0, 480px)
+          fill #cd2430
   .textBlock
     position relative
     background #f6f3ef
@@ -96,10 +107,9 @@
     top 50%
     transform translateY(-50%)
     +mq(0, 480px)
-      top 60px
+      top 0
       transform translateY(0)
-      height auto
-      max-height 100%
+      height 100%
       padding 0
     .CPCblock
       background #f6f3ef
@@ -118,10 +128,13 @@
       +mq(481px, 770px)
         background-size 75%
       +mq(0, 480px)
+        position relative
         height auto
-        max-height 100%
+        max-height 80%
+        top 50%
+        transform translateY(-50%)
         overflow-y auto
-        padding 49px 53px
+        padding 0 30px
         background-size 170%
 
     .title
@@ -188,6 +201,7 @@
           +mq(0, 770px)
             transform scaleX(0)
       +mq(0, 480px)
+        transform scale(0.7)
         width 170px
       .buttonHolder
         transition transform 0.3s
