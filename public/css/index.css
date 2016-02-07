@@ -251,7 +251,7 @@ th {
   }
   [lang="ru"] .about .titleText {
     margin: 0 0 0 20px;
-    padding-top: 257px;
+    padding-top: 252px;
     font-size: 47px;
     line-height: 30px;
   }
@@ -515,14 +515,18 @@ th {
 }
 @media only screen and (min-width: 0) and (max-width: 480px) {
   .chelsea .titleText {
-    margin: 243px 0 0 80px;
     font-size: 55px;
     line-height: 35px;
+    display: block;
+    margin: 247px 0 0 0;
+    right: 20px;
   }
   [lang="ru"] .chelsea .titleText {
-    margin: 260px 0 0 105px;
+    display: block;
+    margin: 257px 0 0 0;
     font-size: 47px;
     line-height: 30px;
+    right: 20px;
   }
 }
 .chelsea .titleText .titleRed {
